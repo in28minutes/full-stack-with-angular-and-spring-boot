@@ -432,6 +432,7 @@ Here are coupons for many of my best-selling courses. Please click the images/co
 ### Todo Service - Business Logic
 
 ```java
+package com.in28minutes.todoservices;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -439,18 +440,18 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.in28minutes.todoservices.model.Todo;
+import com.in28minutes.todoservices.Todo;
 
 @Service
 public class TodoService {
   private static List<Todo> todos = new ArrayList<Todo>();
-  private static int todoCount = 3;
+  private static long todoCount = 3;
 
   static {
-    todos.add(new Todo(1, "in28minutes", "Learn Spring MVC", new Date(),
+    todos.add(new Todo(1l, "in28minutes", "Learn Spring MVC", new Date(),
         false));
-    todos.add(new Todo(2, "in28minutes", "Learn Struts", new Date(), false));
-    todos.add(new Todo(3, "in28minutes", "Learn Hibernate", new Date(),
+    todos.add(new Todo(2l, "in28minutes", "Learn Struts", new Date(), false));
+    todos.add(new Todo(3l, "in28minutes", "Learn Hibernate", new Date(),
         false));
   }
 
