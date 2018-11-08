@@ -432,7 +432,6 @@ Here are coupons for many of my best-selling courses. Please click the images/co
 ### Todo Service - Business Logic
 
 ```java
-package com.in28minutes.todoservices;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;

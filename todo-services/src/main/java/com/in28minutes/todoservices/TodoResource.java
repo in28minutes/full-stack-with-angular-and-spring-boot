@@ -13,4 +13,11 @@ public class TodoResource {
 		return new Todo(1l,"in28minutes","Learn to Dance", 
 				new Date(), false);
 	}
+	
+	@GetMapping("/todos")
+	public Todo retrieveTodos() {
+		return new Todo(1l,"in28minutes","Learn to Dance", 
+				new Date(), false);
+	}
+
 }
