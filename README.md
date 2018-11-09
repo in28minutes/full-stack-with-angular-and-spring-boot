@@ -170,6 +170,80 @@ npm install
 
 - Have final app and a spring boot app running on different ports!
 
+## Request URLs and Examples
+
+### Common Headers
+```
+Origin - http://localhost:4200
+Content-Type - application/json
+```
+
+
+### Retrieve all todos for a user 
+
+- GET - http://localhost:8080/users/in28minutes/todos
+```
+[
+{
+id: 1,
+username: "in28minutes",
+description: "Learn to Dance 2",
+targetDate: "2018-11-09T12:05:18.647+0000",
+done: false,
+},
+{
+id: 2,
+username: "in28minutes",
+description: "Learn about Microservices 2",
+targetDate: "2018-11-09T12:05:18.647+0000",
+done: false,
+},
+{
+id: 3,
+username: "in28minutes",
+description: "Learn about Angular",
+targetDate: "2018-11-09T12:05:18.647+0000",
+done: false,
+},
+]
+```
+### Retrieve a specific todo
+- GET - http://localhost:8080/users/in28minutes/todos/1
+```
+{
+id: 1,
+username: "in28minutes",
+description: "Learn to Dance 2",
+targetDate: "2018-11-09T12:05:18.647+0000",
+done: false,
+}```
+
+### Creating a new todo
+- POST to http://localhost:8080/users/in28minutes/todos with BODY of Request given below
+```
+{
+"username": "in28minutes",
+"description": "Learn to Drive a Car",
+"targetDate": "2018-11-09T10:49:23.566+0000",
+"done": false
+}
+```
+
+### Updating a new todo
+- http://localhost:8080/users/in28minutes/todos/1 with BODY of Request given below
+```
+{
+"id": 1
+"username": "in28minutes",
+"description": "Learn to Drive a Car",
+"targetDate": "2018-11-09T10:49:23.566+0000",
+"done": false
+}
+```
+### Delete todo
+- DELETE to http://localhost:8080/users/in28minutes/todos/1
+
+
 ## Running Examples
 - TODO
 - Download the zip or clone the Git repository.
