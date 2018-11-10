@@ -9,16 +9,6 @@ export class BasicAuthenticationService {
 
   constructor(private http: HttpClient) { }
 
-  authenticate(username, password) {
-    //console.log('before ' + this.isUserLoggedIn());
-    if(username==="in28minutes" && password === 'dummy') {
-      sessionStorage.setItem('authenticaterUser', username);
-      //console.log('after ' + this.isUserLoggedIn());
-      return true;
-    }
-    return false;
-  }
-
   executeAuthenticationService(username, password) {
     
     let basicAuthHeaderString = 'Basic ' + window.btoa(username + ':' + password);
@@ -33,6 +23,7 @@ export class BasicAuthenticationService {
         map(
           data => {
             sessionStorage.setItem('authenticaterUser', username);
+            sessionStorage.setItem('token', basicAuthHeaderString);
             return data;
           }
         )
@@ -40,6 +31,14 @@ export class BasicAuthenticationService {
     //console.log("Execute Hello World Bean Service")
   }
 
+  getAuthenticatedUser() {
+    return sessionStorage.getItem('authenticaterUser')
+  }
+
+  getAuthenticatedToken() {
+    if(this.getAuthenticatedUser())
+      return sessionStorage.getItem('token')
+  }
 
   isUserLoggedIn() {
     let user = sessionStorage.getItem('authenticaterUser')
@@ -48,6 +47,7 @@ export class BasicAuthenticationService {
 
   logout(){
     sessionStorage.removeItem('authenticaterUser')
+    sessionStorage.removeItem('token')
   }
 
 }
