@@ -571,6 +571,14 @@ public class TodoService {
 
 ### Core JWT Components
 
+```properties
+jwt.signing.key.secret=mySecret
+jwt.get.token.uri=/authenticate
+jwt.refresh.token.uri=/refresh
+jwt.http.request.header=Authorization
+jwt.token.expiration.in.seconds=604800
+```
+
 ```java
 package com.in28minutes.todoservices.jwt;
 
@@ -619,7 +627,7 @@ public class JwtTokenAuthorizationOncePerRequestFilter extends OncePerRequestFil
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     
-    @Value("${jwt.header}")
+    @Value("${jwt.http.request.header}")
     private String tokenHeader;
 
     @Override
@@ -668,10 +676,10 @@ public class JwtTokenUtil implements Serializable {
   private static final long serialVersionUID = -3301605591108950415L;
   private Clock clock = DefaultClock.INSTANCE;
 
-  @Value("${jwt.secret}")
+  @Value("${jwt.signing.key.secret}")
   private String secret;
 
-  @Value("${jwt.expiration}")
+  @Value("${jwt.token.expiration.in.seconds}")
   private Long expiration;
 
   public String getUsernameFromToken(String token) {
@@ -839,7 +847,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtTokenAuthorizationOncePerRequestFilter jwtAuthenticationTokenFilter;
 
-    @Value("${jwt.route.authentication.path}")
+    @Value("${jwt.get.token.uri}")
     private String authenticationPath;
 
     @Autowired
@@ -903,7 +911,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
 @CrossOrigin(origins="http://localhost:4200")
 public class JwtAuthenticationRestController {
 
-  @Value("${jwt.header}")
+  @Value("${jwt.http.request.header}")
   private String tokenHeader;
 
   @Autowired
@@ -915,7 +923,7 @@ public class JwtAuthenticationRestController {
   @Autowired
   private UserDetailsService jwtInMemoryUserDetailsService;
 
-  @RequestMapping(value = "${jwt.route.authentication.path}", method = RequestMethod.POST)
+  @RequestMapping(value = "${jwt.get.token.uri}", method = RequestMethod.POST)
   public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtTokenRequest authenticationRequest)
       throws AuthenticationException {
 
@@ -928,7 +936,7 @@ public class JwtAuthenticationRestController {
     return ResponseEntity.ok(new JwtTokenResponse(token));
   }
 
-  @RequestMapping(value = "${jwt.route.authentication.refresh}", method = RequestMethod.GET)
+  @RequestMapping(value = "${jwt.refresh.token.uri}", method = RequestMethod.GET)
   public ResponseEntity<?> refreshAndGetAuthenticationToken(HttpServletRequest request) {
     String authToken = request.getHeader(tokenHeader);
     final String token = authToken.substring(7);
