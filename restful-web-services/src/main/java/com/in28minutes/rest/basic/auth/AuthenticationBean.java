@@ -1,4 +1,4 @@
-package com.in28minutes.rest.webservices.restfulwebservices.basic.auth;
+package com.in28minutes.rest.basic.auth;
 
 public class AuthenticationBean {
 

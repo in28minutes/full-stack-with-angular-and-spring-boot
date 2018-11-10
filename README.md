@@ -976,7 +976,6 @@ public class AuthenticationException extends RuntimeException {
     }
 }
 
-
 public class  JwtTokenRequest implements Serializable {
   
   private static final long serialVersionUID = -5616176897013108345L;
@@ -1276,4 +1275,3 @@ AutomationTests -- Protractor
   
 
 ```
-
