@@ -900,6 +900,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 
 @RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class JwtAuthenticationRestController {
 
   @Value("${jwt.header}")
@@ -959,6 +960,12 @@ public class JwtAuthenticationRestController {
       throw new AuthenticationException("INVALID_CREDENTIALS", e);
     }
   }
+}
+
+public class AuthenticationException extends RuntimeException {
+    public AuthenticationException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }
 
 
