@@ -24,7 +24,7 @@ In this course, lets combine these awesome frameworks to create your first full 
 
 #### Installing Node Js (npm) & Visual Studio Code 
 
-- Playlist - https://www.youtube.com/playlist?list=PLAYLIST
+- Playlist - https://www.youtube.com/playlist?list=PLBBog2r6uMCQN4X3Aa_jM9qVjgMCHMWx6
 - Steps
   - Step 01 - Installing NodeJs and NPM - Node Package Manager
   - Step 02 - Quick Introduction to NPM
