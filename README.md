@@ -20,6 +20,7 @@ In this course, lets combine these awesome frameworks to create your first full 
 
 - Node v8+ for npm
 - Visual Studio Code - Latest Version
+- Java 8+
 - Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
 
 #### Installing Node Js (npm) & Visual Studio Code 
@@ -30,7 +31,7 @@ In this course, lets combine these awesome frameworks to create your first full 
   - Step 02 - Quick Introduction to NPM
   - Step 03 - Installing Visual Studio Code - Front End Java Script Editor
 
-#### Installing Eclipse & Embedded Maven
+#### Installing Java, Eclipse & Embedded Maven
 
 - Playlist - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - Steps
@@ -84,6 +85,7 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - You will understand and use the embedded servlet container options provided by Spring Boot
 
 ### Requirements
+
 - You should have prior experience with Java, Basic JavaScript and Spring Framework. 
 - You should have Chrome browser installed.
 - We will help you install Eclipse, Visual Studio Code and Node JS(for npm)
@@ -91,6 +93,9 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - We will help you learn the basics of Modern JavaScript, TypeScript, Spring Boot and JPA.
 
 ### Step Wise Details
+
+#### Overview
+
 - Step 01: Understanding Full Stack Application Architecture
 - Step 02: Quick Overview of Modern JavaScript and TypeScript
 - Step 03: Installing Angular CLI - Awesome Tool to create Angular Projects
@@ -98,10 +103,13 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 05: Importing Angular App into Visual Studio Code
 - Step 06: Exploring Angular CLI Commands - test, lint, e2e, serve, build
 - Step 07: Exploring Angular CLI Project Structure
+
+#### Getting Hands on With Angular
+
 - Step 08: Introduction to Angular Components - Basics
 - Step 09: Introduction to Angular Components - Playing with AppComponent
 - Step 10: Generating Welcome Component with ng generate
-- Step 11: Language Variations With an Example - Java, JavaScript and TypeScrip
+- Step 11: Language Variations With an Example - Java, JavaScript and TypeScript
 - Step 12: Generating and Setting up Login Component
 - Step 13: Understanding Event Binding - Adding click event on Login Page
 - Step 14: Using ngModel with 2 Way Data Binding in Login Page
@@ -124,8 +132,10 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 31: Creating an Independent Authentication Service Component
 - Step 32: Using Session Storage to Store User Authentication Token
 - Step 33: Enabling Menu Links Based on User Authentication Token
-- Step 34: 
-- Step 35: 
+- Step 34: Implementing Logout to remove User Authentication Token
+- Step 35: Securing Components using Route Guards - Part 1
+- Step 36: Securing Components using Route Guards - Part 2
+- Step 37: Quick Review - Authentication Service, Dependency Injection and Route Guards
 
 ```sh
 for file in *; do mv "${file}" "${file//-/ }";
