@@ -40,8 +40,18 @@ In this course, lets combine these awesome frameworks to create your first full 
   - 2 - Installing Eclipse IDE
   - 3 - Using Embedded Maven in Eclipse
   - 4 - Troubleshooting Java, Eclipse and Maven
-- PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
-- GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
+
+#### Troubleshooting Installations
+
+- Node JS and NPM 
+  - https://docs.npmjs.com/common-errors
+  - https://docs.npmjs.com/getting-started/troubleshooting
+- Visual Studio Code
+  - https://code.visualstudio.com/docs/supporting/errors
+  - https://code.visualstudio.com/docs/supporting/FAQ
+- Eclipse and Embedded Maven
+  - PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
+  - GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
 
 ### Getting Started with Spring, Spring Boot and JPA
 - Spring Tutorial for Beginners - https://www.youtube.com/watch?v=edgZo2g-LTM
