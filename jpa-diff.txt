@@ -1,0 +1,221 @@
+diff --git a/frontend/todo/src/app/app.constants.ts b/frontend/todo/src/app/app.constants.ts
+index b01b800..bfb0231 100644
+--- a/frontend/todo/src/app/app.constants.ts
++++ b/frontend/todo/src/app/app.constants.ts
+@@ -1 +1,2 @@
+-export const API_URL = "http://localhost:8080"
+\ No newline at end of file
++export const API_URL = "http://localhost:8080"
++export const TODO_API_URL = "http://localhost:8080/jpa"
+\ No newline at end of file
+diff --git a/frontend/todo/src/app/service/data/todo-data.service.ts b/frontend/todo/src/app/service/data/todo-data.service.ts
+index 3fa923f..9c276e2 100644
+--- a/frontend/todo/src/app/service/data/todo-data.service.ts
++++ b/frontend/todo/src/app/service/data/todo-data.service.ts
+@@ -1,4 +1,4 @@
+-import { API_URL } from './../../app.constants';
++import { TODO_API_URL } from './../../app.constants';
+ import { HttpClient } from '@angular/common/http';
+ import { Injectable } from '@angular/core';
+ import { Todo } from '../../list-todos/list-todos.component';
+@@ -13,27 +13,27 @@ export class TodoDataService {
+   ) { }
+ 
+   retrieveAllTodos(username) {
+-    return this.http.get<Todo[]>(`${API_URL}/users/${username}/todos`);
++    return this.http.get<Todo[]>(`${TODO_API_URL}/users/${username}/todos`);
+     //console.log("Execute Hello World Bean Service")
+   }
+ 
+   deleteTodo(username, id){
+-    return this.http.delete(`${API_URL}/users/${username}/todos/${id}`);
++    return this.http.delete(`${TODO_API_URL}/users/${username}/todos/${id}`);
+   }
+ 
+   retrieveTodo(username, id){
+-    return this.http.get<Todo>(`${API_URL}/users/${username}/todos/${id}`);
++    return this.http.get<Todo>(`${TODO_API_URL}/users/${username}/todos/${id}`);
+   }
+ 
+   updateTodo(username, id, todo){
+     return this.http.put(
+-          `${API_URL}/users/${username}/todos/${id}`
++          `${TODO_API_URL}/users/${username}/todos/${id}`
+                 , todo);
+   }
+ 
+   createTodo(username, todo){
+     return this.http.post(
+-              `${API_URL}/users/${username}/todos`
++              `${TODO_API_URL}/users/${username}/todos`
+                 , todo);
+   }
+ 
+diff --git a/frontend/todo/src/app/todo/todo.component.ts b/frontend/todo/src/app/todo/todo.component.ts
+index 7dc47bc..b0c1994 100644
+--- a/frontend/todo/src/app/todo/todo.component.ts
++++ b/frontend/todo/src/app/todo/todo.component.ts
+@@ -34,7 +34,9 @@ export class TodoComponent implements OnInit {
+   }
+ 
+   saveTodo() {
+-    if(this.id === -1) {
++    console.log(this.id);
++    if(this.id == -1) {
++      console.log('Calling Update')
+       this.todoService.createTodo('in28minutes', this.todo)
+           .subscribe (
+             data => {
+diff --git a/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/Todo.java b/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/Todo.java
+index e209d05..f83568a 100644
+--- a/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/Todo.java
++++ b/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/Todo.java
+@@ -2,8 +2,16 @@ package com.in28minutes.rest.webservices.restfulwebservices.todo;
+ 
+ import java.util.Date;
+ 
++import javax.persistence.Entity;
++import javax.persistence.GeneratedValue;
++import javax.persistence.Id;
++
++@Entity
+ public class Todo {
+-	private long id;
++	
++	@Id
++	@GeneratedValue
++	private Long id;
+ 	private String username;
+ 	private String description;
+ 	private Date targetDate;
+@@ -22,11 +30,11 @@ public class Todo {
+ 		this.isDone = isDone;
+ 	}
+ 
+-	public long getId() {
++	public Long getId() {
+ 		return id;
+ 	}
+ 
+-	public void setId(long id) {
++	public void setId(Long id) {
+ 		this.id = id;
+ 	}
+ 
+diff --git a/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoHardcodedService.java b/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoHardcodedService.java
+index 3e89570..f47b31f 100644
+--- a/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoHardcodedService.java
++++ b/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoHardcodedService.java
+@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
+ public class TodoHardcodedService {
+ 	
+ 	private static List<Todo> todos = new ArrayList<>();
+-	private static int idCounter = 0;
++	private static long idCounter = 0;
+ 	
+ 	static {
+ 		todos.add(new Todo(++idCounter, "in28minutes","Learn to Dance 2", new Date(), false ));
+diff --git a/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoResource.java b/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoResource.java
+index ee390e6..111038f 100644
+--- a/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoResource.java
++++ b/restful-web-services/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/todo/TodoResource.java
+@@ -16,57 +16,62 @@ import org.springframework.web.bind.annotation.RequestBody;
+ import org.springframework.web.bind.annotation.RestController;
+ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+ 
+-import com.in28minutes.rest.webservices.restfulwebservices.todo.Todo;
+-
+ @CrossOrigin(origins="http://localhost:4200")
+ @RestController
+ public class TodoResource {
+ 	
+ 	@Autowired
+ 	private TodoHardcodedService todoService;
++
++	@Autowired
++	private TodoRepository todoRepository;
++
+ 	
+-	@GetMapping("/users/{username}/todos")
++	@GetMapping("/jpa/users/{username}/todos")
+ 	public List<Todo> getAllTodos(@PathVariable String username){
+-		return todoService.findAll();
++		return todoRepository.findByUsername(username);
+ 	}
+ 
+-	@GetMapping("/users/{username}/todos/{id}")
++	@GetMapping("/jpa/users/{username}/todos/{id}")
+ 	public Todo getTodo(@PathVariable String username, @PathVariable long id){
+-		return todoService.findById(id);
++		return todoRepository.findById(id).get();
+ 	}
+ 
+ 	//DELETE /users/{username}/todos/{id}
+-	@DeleteMapping("/users/{username}/todos/{id}")
++	@DeleteMapping("/jpa/users/{username}/todos/{id}")
+ 	public ResponseEntity<Void> deleteTodo(
+ 			@PathVariable String username, @PathVariable long id){
+ 		
+-		Todo todo = todoService.deleteById(id);
+-		
+-		if(todo!=null) {
+-			return ResponseEntity.noContent().build();
+-		}
++		todoRepository.deleteById(id);
++		return ResponseEntity.noContent().build();
+ 		
+-		return ResponseEntity.notFound().build();
++//		if(todo!=null) {
++			
++//		}
++//		
++//		return ResponseEntity.notFound().build();
+ 	}
+ 	
+ 
+ 	//Edit/Update a Todo
+ 	//PUT /users/{user_name}/todos/{todo_id}
+-	@PutMapping("/users/{username}/todos/{id}")
++	@PutMapping("/jpa/users/{username}/todos/{id}")
+ 	public ResponseEntity<Todo> updateTodo(
+ 			@PathVariable String username,
+ 			@PathVariable long id, @RequestBody Todo todo){
+ 		
+-		Todo todoUpdated = todoService.save(todo);
++		Todo todoUpdated = todoRepository.save(todo);
+ 		
+ 		return new ResponseEntity<Todo>(todo, HttpStatus.OK);
+ 	}
+ 	
+-	@PostMapping("/users/{username}/todos")
++	@PostMapping("/jpa/users/{username}/todos")
+ 	public ResponseEntity<Void> updateTodo(
+ 			@PathVariable String username, @RequestBody Todo todo){
++		todo.setId(null);
++		todo.setUsername(username);
+ 		
+-		Todo createdTodo = todoService.save(todo);
++		Todo createdTodo = todoRepository.save(todo);
+ 		
+ 		//Location
+ 		//Get current resource url
+
+package com.in28minutes.rest.webservices.restfulwebservices.todo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Long>{
+  
+  List<Todo> findByUsername(String userName);
+
+}
+
+insert into todo(id,username,description,target_date,is_done)
+values(10001,'in28minutes','Learn to Dance', sysdate(), false);
+
+insert into todo(id,username,description,target_date,is_done)
+values(10002,'in28minutes','Learn about Microservices', sysdate(), false);
