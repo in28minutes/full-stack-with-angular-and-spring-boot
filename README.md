@@ -14,83 +14,15 @@ Spring Boot is an awesome framework to build RESTful API and Microservices.
 
 In this course, lets combine these awesome frameworks to create your first full stack web application.
 
-# FAQ
-
-## Big Picture
-- What is the High Level Architecture of our Full Stack Application?
-- What is an SPA?
-- What is Angular?
-
-## TypeScript and JavaScript
-
-- TypeScript syntax looks so new. Will I be able to adapt to it? DONE
-- How does a JavaScript Class compare to a Java Class? DONE
-  - Packages vs Modules
-  - import statements
-  - Decorator vs Annotation
-- What is a JavaScript Module? DONE
-- What does TypeScript add on top of JavaScript? DONE
-- How does JavaScript Syntax compare to Java Syntax?
-  - Arrays - Filtering, Spread Operator and Functional Stuff
-  - Custom Objects DONE
-
-## Angular Basics  DONE
-- What is Angular Component? DONE
-- How is Angular Component implemented? DONE
-  - Play with Selector, Template and Styles DONE
-- What are the conventions for file extensions in Angular Projects? DONE
-- What is Angular Module? Why do we need Modules? What are inbuilt Modules in Angular?
-How are they different from JavaScript Modules?  DONE
-- How is an Angular Module implemented?  DONE
-- How can I use a component which is built into another module?  DONE
-
-## Running Angular Applications
-- What is 'ng serve'? What does it enable for developers? DONE
-- What is Root Module? What are Bootstrap Components? How is the Angular Application Bootstrapped?  ```\src\index.html```, ```\src\main.ts```, ```AppModule```, ```AppComponent``` DONE
-- Do Browsers understand TypeScript? How does TypeScript code get converted to JavaScript code? ```\tsconfig.json```, ```\src\tsconfig.app.json```, ```\src\tsconfig.spec.json```
-- What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? ```\src\main.ts```, ```\src\polyfills.ts```, ```\src\styles.css```, ```\src\**\*.component.css```
-- How can I rollback changes made by Angular CLI?
-- What are ```angular.json```, ```package.json```, ```\node_modules?  DONE
-
-## Automated Tests and Code Quality
-- What are unit tests? How are unit tests organized in Angular? How is different from Java?
-- How can you run tests? ```\src\karma.conf.ts```
-- How can you learn to write tests for Angular? 
-- What are coding standards? How can you check coding standards for Angular Cli Project? What is Lint? What is Linting? Is there a Standard Style Guide for Angular? ```\tslint.json```
-- How can I run coding standards check for Angular Projects?
-- What are end to end tests? How are end to end tests organized in Angular? How can you run end to end tests? e2e folder
-- How can you learn to write end to end tests for Angular?
-
-## Tools
-- What is npm?
-- What is WebPack?
-
-## Other Angular Topics
-- What is Data Binding?
-- What are the different kinds of Data Binding?
-  - /blog/src/app/basics/basics.component.html
-  - Angular Specific Syntax
-    - [class.active]="isActive()"
-    - [style.font]="determineFont"
-- How do you build forms in Angular?
-- How do you build various form elements in Angular? 
-  - /blog/src/app/box/box.component.html
-  - /blog/src/app/form/form.component.html
-- How do you implement form validation in Angular
-  - /blog/src/app/form/form.component.css 
-- What is Routing?
-- How do you implement Routing in Angular?
-- How do you call HTTP Services in Angular?
-- What is Dependency Injection?
-- What is a Service?
-- What is a Child Component?
-  - person-row.component.html, person.component.html
-- Where do you store static content in Angular Projects? src\assets folder
-- How can you configure environment configuration in Angular Projects? src\environments folder
-- How do you create a production deployment? What are the production optimizations that are done? What is Uglification? What is Minification?
-
-
 ## Installation Guides and Getting Started References
+
+- Node v8+ for npm
+- Visual Studio Code - Latest Version
+- Eclipse - Oxygen+
+- (Embedded Maven From Eclipse)
+
+### Installing Node Js (npm) & Visual Studion Code
+- Installation Playlist : https://www.youtube.com/playlist?list=PLAYLIST
 
 ### Installing Eclipse & Embedded Maven
 - Installation Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
@@ -100,247 +32,43 @@ How are they different from JavaScript Modules?  DONE
 - GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
 - PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
 
-### Installing Front End Tools
-
-Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ node -v
-v8.12.0
-Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ npm -v
-6.4.1
-
-```
-#Global
-npm uninstall -g angular-cli
-npm cache verify
-npm install -g @angular/cli@7.0.3
-
-#Inside the project - If you had an earlier version of angular cli
-rm -rf node_modules
-npm uninstall --save-dev angular-cli
-npm install --save-dev @angular/cli@latest
-npm install
-```
-- Why Visual Studio Code?
-  - https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0k2kj45,%2Fm%2F0_x5x3g,%2Fm%2F0134xwrk,%2Fm%2F0b6h18n
-- We use Light Theme
-- Install
-    - Auto Import - Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript and TSX
-    - Reload to Activate
-
 ### Getting Started with Spring, Spring Boot and JPA
 - Spring Tutorial for Beginners - https://www.youtube.com/watch?v=edgZo2g-LTM
 - Spring Boot Tutorial for Beginners - https://www.youtube.com/watch?v=pcdpk3Yd1EA
 - JPA and Hibernate Tutorial for Beginners - https://www.youtube.com/watch?v=MaI0_XdpdP8
 
-## Course Details
-
-### Features
-- Welcome Page - Hardcoded Name, Service for Welcome Message
-  - HTTP Service
-  - handleServiceError(error: HttpErrorResponse)
-- Layout
-  - Display Menu
-  - Display Footer
-  - Secured and Unsecured Component using RouteGuardService  implements CanActivate
-    - /blog/src/app/secured/secured.component.ts
-- Login Page - Hardcoded Name, Hardcoded Logic, Moving Logic to Authentication Service (Use sessionStorage instead of localStorage)
-- Logout
-- List Todos
-- Edit Todos
-- Delete Todos
-- New Todo
-- Connecting Todos to Real Services Step By Step
-- Routing from Login to Welcome Page
-- Basic Authentication
-- BasicHttpInterceptor
-- JWT
-
-- All Kinds of Bindings 
-  - /blog/src/app/basics/basics.component.html
-  - Angular Specific Syntax
-    - [class.active]="isActive()"
-    - [style.font]="determineFont"
-- Child Component
-  - person-row.component.html, person.component.html
-- Some Logic
-  - /blog/src/app/hero/hero.component.html
-- Form Elements
-  - /blog/src/app/box/box.component.html
-  - /blog/src/app/form/form.component.html
-  - Validation /blog/src/app/form/form.component.css 
-
-- Have final app and a spring boot app running on different ports!
-
-## Request URLs and Examples
-
-### Common Headers
-
-```
-Origin - http://localhost:4200
-Content-Type - application/json
-Authorization 
-- Bearer *** or
-- Basic *****
-```
-
-
-### Retrieve all todos for a user 
-
-- GET - http://localhost:8080/users/in28minutes/todos
-
-```
-[
-  {
-    id: 1,
-    username: "in28minutes",
-    description: "Learn to Dance 2",
-    targetDate: "2018-11-09T12:05:18.647+0000",
-    done: false,
-  },
-  {
-    id: 2,
-    username: "in28minutes",
-    description: "Learn about Microservices 2",
-    targetDate: "2018-11-09T12:05:18.647+0000",
-    done: false,
-  },
-  {
-    id: 3,
-    username: "in28minutes",
-    description: "Learn about Angular",
-    targetDate: "2018-11-09T12:05:18.647+0000",
-    done: false,
-  },
-]
-```
-
-### Retrieve a specific todo
-
-- GET - http://localhost:8080/users/in28minutes/todos/1
-
-```
-{
-  id: 1,
-  username: "in28minutes",
-  description: "Learn to Dance 2",
-  targetDate: "2018-11-09T12:05:18.647+0000",
-  done: false,
-}
-```
-
-### Creating a new todo
-
-- POST to http://localhost:8080/users/in28minutes/todos with BODY of Request given below
-
-```
-{
-  "username": "in28minutes",
-  "description": "Learn to Drive a Car",
-  "targetDate": "2018-11-09T10:49:23.566+0000",
-  "done": false
-}
-```
-
-### Updating a new todo
-
-- http://localhost:8080/users/in28minutes/todos/1 with BODY of Request given below
-
-```
-{
-  "id": 1
-  "username": "in28minutes",
-  "description": "Learn to Drive a Car",
-  "targetDate": "2018-11-09T10:49:23.566+0000",
-  "done": false
-}
-```
-
-### Delete todo
-
-- DELETE to http://localhost:8080/users/in28minutes/todos/1
-
-### JWT Authenticate
-
-- POST to http://localhost:8080/authenticate
-
-
-```
-{
-  "username":"ranga",
-  "password":"password@!23@#!"
-}
-```
-
-Response
-
-```
-{
-"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYW5nYSIsImV4cCI6MTU0MjQ3MjA3NCwiaWF0IjoxNTQxODY3Mjc0fQ.kD6UJQyxjSPMzAhoTJRr-Z5UL-FfgsyxbdseWQvk0fLi7eVXAKhBkWfj06SwH43sY_ZWBEeLuxaE09szTboefw"
-}
-```
-
-Other URLS
-- Refresh - http://localhost:8080/authenticate
-
-## Running Examples
-- TODO
-- Download the zip or clone the Git repository.
-- Unzip the zip file (if you downloaded one)
-- Open Command Prompt and Change directory (cd) to folder containing pom.xml
-- Open Eclipse 
-   - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-   - Select the right project
-- Choose the Spring Boot Application file (search for file with @SpringBootApplication)
-- Right Click on the file and Run as Java Application
-- You are all Set
-- For help : use our installation guide - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-
 ## Course Overview
 
 ### Introduction
-Developing your first application with XYZ Framework is fun.
+Developing your first full stack application with Angular and Spring Boot is fun.
 
-Introduction to XYZ Framework..
+In this course, you will learn the basics of full stack development developing a Basic Todo Management Application using Angular, Spring Boot and Spring Security Frameworks.
 
-In this course, you will learn the basics developing a Basic Todo Management Application using XYZ Framework.
+You will build the application step by step - in more than 50 steps. This course would be a perfect first step as an introduction to Angular and Full Stack Development.
 
-You will build the application step by step - in more than 25 steps. This course would be a perfect first step as an introduction to XYZ Framework.
-
-You will be using Spring (Dependency Management), Spring MVC, Spring Boot, Spring Security (Authentication and Authorization), BootStrap (Styling Pages), Maven (dependencies management), Eclipse (IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
+You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(To create Angular projects), Spring Boot (REST API Framework), Spring (Dependency Management),  Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Node (npm), Visual Studio Code (TypeScript IDE), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
 
 ### What You will learn
 
-- You will learn to Topic No 1
-- You will understand about Topic No 1
-- You will develop a great application
-
-##### Examples
-- You will learn to design and develop SOAP and RESTful web services with Spring Boot
-- You will learn the magic of Spring Boot - Auto Configuration, Spring Initializr and Starter Projects
-- You will learn to connect web services to JPA/Hibernate with Spring Boot
-- You will understand how to implement Exception Handling, Validation, HATEOAS and filtering for RESTful Web Services.
-- You will learn to use a wide variety of Spring Boot Starter Projects - Spring Boot Web, Spring Boot Web Services, Spring Boot Data JPA
-- You will learn how to version, monitor (Spring Boot Actuator) and document (Swagger) your RESTful Web Services with Spring Boot
+- You will develop your first full stack application with Angular and Spring Boot
+- You will learn the basic of Angular - Angular Modules, Components, Data Binding and Routing- You will learn basics of building awesome frontend applications with Angular
+- You will be introduced to building great RESTful APIs with Spring Boot
+- You will learn to use Spring Security to configure Basic Authentication and JWT
+- You will learn to solve the challenges of connecting an Angular Frontend to a RESTful API
+- You will learn to connect REST API to JPA/Hibernate with Spring Boot
+- You will learn to use a wide variety of Spring Boot Starter Projects - Spring Boot Web, and Spring Boot Data JPA
 - You will understand the best practices in designing RESTful web services
-- You will understand about WSDL, SOAP Header, SOAP Body, SOAP Fault, XSD, JAXB and EndPoint
 - You will develop a Todo Management Application step by step with login and logout functionalities
-- You will learn to use an Annotation based approach - @RequestParam, @ModelAttribute, @SessionAttributes
-- You will understand the basics of developing a Web Application - POST, GET, HTTP, MVC Pattern
-- You will learn the basics of JSP, JSTL, EL, Spring Tag Libraries
-- You will learn some of the magic of Spring Boot
-- You will understand Spring MVC in depth - DispatcherServlet , Model, Controllers and ViewResolver
 - You will learn the magic of Spring Boot - Auto Configuration, Spring Initializr and Starter Projects
-- You will learn to develop RESTful web services with Spring Boot
-- You will learn to develop a Web Application connecting to JPA/Hibernate Step by Step with Spring MVC and Spring Boot
-- You will learn to use a wide variety of Spring Boot Starter Projects - Spring Boot Web, Spring Boot Test, Spring Boot Data JPA, Spring Boot Data REST
-- You will understand Spring MVC in depth - DispatcherServlet , Model, Controllers and ViewResolver
 - You will understand how to make best use of Spring Boot Actuator and Spring Boot Developer Tools
-- You will learn how to externalise application configuration using Spring Boot Profiles and Dynamic Configuration
-- You will understand and use the embedded servlet container options provided by Spring Boot - Tomcat, Jetty and Undertow
-- You will learn to write great Unit and Integration tests using Spring Boot Starter Test
+- You will understand and use the embedded servlet container options provided by Spring Boot
 
 ### Requirements
-- You should have working knowledge of Java and Annotations. 
-- We will help you install Eclipse and get up and running with Maven and Tomcat.
+- You should have prior experience with Java, Basic JavaScript and Spring Framework. 
+- You should have Chrome browser installed.
+- We will help you install Eclipse, Visual Studio Code and Node JS(for npm)
+- We will help you install Chrome Restlet Client Plugin
+- We will help you learn the basics of Modern JavaScript, TypeScript, Spring Boot and JPA.
 
 ### Step Wise Details
 - 01 Step 01: 
@@ -380,9 +108,9 @@ You will be using Spring (Dependency Management), Spring MVC, Spring Boot, Sprin
 - 01 Step 35: 
 
 ```sh
-for file in *; do mv "${file}" "${file//-/ }"; done
-for file in *; do mv "${file}" "${file//   / - }"; done
-for file in *; do mv "${file}" "${file//01 Step/Step}"; done
+for file in *; do mv "${file}" "${file//-/ }";
+for file in *; do mv "${file}" "${file//   / - }";
+for file in *; do mv "${file}" "${file//01 Step/Step}";
 ```
 
 ### Course Recording Notes
@@ -530,6 +258,198 @@ Here are coupons for many of my best-selling courses. Please click the images/co
 - We use 80-20 Rule. We discuss 20% things used 80% of time in depth. We touch upon other things briefly equipping you with enough knowledge to find out more on your own. 
 - We will be developing a demo application in the course, which could be reused in your projects, saving hours of your effort.
 - We love open source and therefore, All our code is open source too and available on Github.
+
+
+#### Troubleshooting
+
+```
+Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ node -v
+
+Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ npm -v
+6.4.1
+
+#Global
+npm uninstall -g angular-cli
+npm cache verify
+npm install -g @angular/cli@7.0.3
+
+#Inside the project - If you had an earlier version of angular cli
+rm -rf node_modules
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+```
+- Why Visual Studio Code?
+  - https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0k2kj45,%2Fm%2F0_x5x3g,%2Fm%2F0134xwrk,%2Fm%2F0b6h18n
+- We use Light Theme
+- Install
+    - Auto Import - Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript and TSX
+    - Reload to Activate
+
+## What You will Learn?
+
+### Big Picture
+- What is the High Level Architecture of our Full Stack Application?
+- What is an SPA?
+- What is Angular?
+
+### TypeScript and JavaScript
+- I'm new to TypeScript. Will I be able to adapt to it?
+- How does a JavaScript Class compare to a Java Class?
+  - Packages vs Modules
+  - import statements
+  - Decorator vs Annotation
+- What is a JavaScript Module?
+- What does TypeScript add on top of JavaScript?
+- How does JavaScript Syntax compare to Java Syntax?
+  - Arrays - Filtering, Spread Operator and Functional Stuff
+  - Custom Objects
+
+### Angular Basics 
+- What is Angular Component?
+- How is Angular Component implemented?
+  - Play with Selector, Template and Styles
+- What are the conventions for file extensions in Angular Projects?
+- What is Angular Module? Why do we need Modules? What are inbuilt Modules in Angular?
+How are they different from JavaScript Modules? 
+- How is an Angular Module implemented? 
+- How can I use a component which is built into another module? 
+- How do you build forms in Angular? How do you do Form Validation?
+- What is Data Binding?
+- What is Routing?
+- How do you implement Routing in Angular?
+- How do you call HTTP Services in Angular?
+- What is Dependency Injection?
+- What is a Service?
+- Where do you store static content in Angular Projects? src\assets folder
+
+### Running Angular Applications
+- What is 'ng serve'? What does it enable for developers?
+- What is Root Module? What are Bootstrap Components? How is the Angular Application Bootstrapped?  ```\src\index.html```, ```\src\main.ts```, ```AppModule```, ```AppComponent```
+- Do Browsers understand TypeScript? How does TypeScript code get converted to JavaScript code? ```\tsconfig.json```, ```\src\tsconfig.app.json```, ```\src\tsconfig.spec.json```
+- What are ```angular.json```, ```package.json```, ```\node_modules? 
+
+## Automated Tests and Code Quality
+- What are unit tests? How are unit tests organized in Angular? How is different from Java?
+- How can you run tests? ```\src\karma.conf.ts```
+- What are coding standards? How can you check coding standards for Angular Cli Project? What is Lint? What is Linting? Is there a Standard Style Guide for Angular? ```\tslint.json```
+- How can I run coding standards check for Angular Projects?
+- What are end to end tests? How are end to end tests organized in Angular? How can you run end to end tests? e2e folder
+
+## Course Details
+
+
+### Request URLs and Examples
+
+#### Common Headers
+
+```
+Origin - http://localhost:4200
+Content-Type - application/json
+Authorization 
+- Bearer *** or
+- Basic *****
+```
+
+
+#### Retrieve all todos for a user 
+
+- GET - http://localhost:8080/users/in28minutes/todos
+
+```
+[
+  {
+    id: 1,
+    username: "in28minutes",
+    description: "Learn to Dance 2",
+    targetDate: "2018-11-09T12:05:18.647+0000",
+   : false,
+  },
+  {
+    id: 2,
+    username: "in28minutes",
+    description: "Learn about Microservices 2",
+    targetDate: "2018-11-09T12:05:18.647+0000",
+   : false,
+  },
+  {
+    id: 3,
+    username: "in28minutes",
+    description: "Learn about Angular",
+    targetDate: "2018-11-09T12:05:18.647+0000",
+   : false,
+  },
+]
+```
+
+#### Retrieve a specific todo
+
+- GET - http://localhost:8080/users/in28minutes/todos/1
+
+```
+{
+  id: 1,
+  username: "in28minutes",
+  description: "Learn to Dance 2",
+  targetDate: "2018-11-09T12:05:18.647+0000",
+ : false,
+}
+```
+
+#### Creating a new todo
+
+- POST to http://localhost:8080/users/in28minutes/todos with BODY of Request given below
+
+```
+{
+  "username": "in28minutes",
+  "description": "Learn to Drive a Car",
+  "targetDate": "2018-11-09T10:49:23.566+0000",
+  "done": false
+}
+```
+
+#### Updating a new todo
+
+- http://localhost:8080/users/in28minutes/todos/1 with BODY of Request given below
+
+```
+{
+  "id": 1
+  "username": "in28minutes",
+  "description": "Learn to Drive a Car",
+  "targetDate": "2018-11-09T10:49:23.566+0000",
+  "done": false
+}
+```
+
+#### Delete todo
+
+- DELETE to http://localhost:8080/users/in28minutes/todos/1
+
+### JWT Authenticate
+
+- POST to http://localhost:8080/authenticate
+
+
+```
+{
+  "username":"ranga",
+  "password":"password@!23@#!"
+}
+```
+
+Response
+
+```
+{
+"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYW5nYSIsImV4cCI6MTU0MjQ3MjA3NCwiaWF0IjoxNTQxODY3Mjc0fQ.kD6UJQyxjSPMzAhoTJRr-Z5UL-FfgsyxbdseWQvk0fLi7eVXAKhBkWfj06SwH43sY_ZWBEeLuxaE09szTboefw"
+}
+```
+
+Other URLS
+- Refresh - http://localhost:8080/authenticate
+
 
   
 ### Useful Links
@@ -940,7 +860,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
             )
             .and()
             .ignoring()
-            .antMatchers("/h2-console/**/**");//Should not be done in Production!
+            .antMatchers("/h2-console/**/**");//Should not be in Production!
     }
 }
 
@@ -1077,54 +997,6 @@ create table todo (
 
 ```
 ---
-## Next Steps
-- https://angular.io/guide/quickstart
-- https://angular.io/tutorial/toh-pt0
-- TypeScript > .ts - https://devhints.io/typescript
-- (spec-test files)
-- JavaScript > https://github.com/mbeaudru/modern-js-cheatsheet#tdz_sample
-  - import, decorator
-- Component > Root Component
-  - Components are the fundamental building blocks of Angular applications. They display data on the screen, listen for user input, and take action based on that input.
-- Module > Angular Module (ngModule)
-- Routing
-- Overall Project Structure and Important Files
-  - package.json (packages, dependencies, devDependencies)
-- Architecture Picture
-  - Angular Modules > Components > Services (Dependency Injection)
-  - Printout
-- Application Overview - Demo
-- Application Overview Architecture = Front End + REST API
-- Angular Introduction - https://angular.io/docs Zoomed in
-- package.json vs package in java - https://docs.npmjs.com/getting-started/using-a-package.json
-- TypeScript 
-  - https://learnxinyminutes.com/docs/typescript/
-  - http://www.typescriptlang.org/docs/handbook/basic-types.html
-  - https://devhints.io/typescript 
-- Modern JavaScript 
-  - https://github.com/mbeaudru/modern-js-cheatsheet#tdz_sample
-  - https://learnxinyminutes.com/docs/javascript/
-- Modular JavaScript
-  - https://github.com/mjavascript/mastering-modular-javascript/blob/master/chapters/ch01.asciidoc
-- Dev vs Prod Configuration
-- Deployment
-  - Seperate vs Together
-  - Deploying to Cloud
-- Material Design
-- https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html#ixzz5UozFe9Bu
-- Connecting to Database
-- https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8
-- https://medium.com/frontend-coach/7-must-have-visual-studio-code-extensions-for-angular-af9c476147fd
-- Debugging with Visual Studio Code
-  - To debug the client side Angular code, we'll need to install the Debugger for Chrome extension - https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
-  - Open the Extensions view (⇧⌘X or Ctrl+Shift+X)
-  - Type Debugger for Chrome
-  - Install
-  - Reload
-  - Go to the Debug view (⇧⌘D or Ctrl+Shift+D)
-  - Click on gear button to create launch.json
-  - Choose Chrome from the Select Environment dropdown
-  - Set URL to "url": "http://localhost:4200"
 
 launch.json
 ```json
@@ -1326,3 +1198,66 @@ AutomationTests -- Protractor
   
 
 ```
+
+## Todo
+- What is npm?
+- What is WebPack?
+- What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? ```\src\main.ts```, ```\src\polyfills.ts```, ```\src\styles.css```, ```\src\**\*.component.css```
+- How can I rollback changes made by Angular CLI?
+- How can you learn to write tests for Angular? 
+- How can you learn to write end to end tests for Angular?
+- What are the different kinds of Data Binding?
+  - /blog/src/app/basics/basics.component.html
+  - Angular Specific Syntax
+    - [class.active]="isActive()"
+    - [style.font]="determineFont"
+- How do you build various form elements in Angular? 
+  - /blog/src/app/box/box.component.html
+  - /blog/src/app/form/form.component.html
+- What is a Child Component?
+  - person-row.component.html, person.component.html
+- How can you configure environment configuration in Angular Projects? src\environments folder
+- How do you create a production deployment? What are the production optimizations that are? What is Uglification? What is Minification?
+- https://medium.com/frontend-coach/7-must-have-visual-studio-code-extensions-for-angular-af9c476147fd
+- Dev vs Prod Configuration
+- Deployment
+  - Seperate vs Together
+  - Deploying to Cloud
+- Material Design
+- Debugging with Visual Studio Code
+  - To debug the client side Angular code, we'll need to install the Debugger for Chrome extension - https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
+  - Open the Extensions view (⇧⌘X or Ctrl+Shift+X)
+  - Type Debugger for Chrome
+  - Install
+  - Reload
+  - Go to the Debug view (⇧⌘D or Ctrl+Shift+D)
+  - Click on gear button to create launch.json
+  - Choose Chrome from the Select Environment dropdown
+  - Set URL to "url": "http://localhost:4200"
+- Running Examples
+  - Download the zip or clone the Git repository.
+  - Unzip the zip file (if you downloaded one)
+  - Open Command Prompt and Change directory (cd) to folder containing pom.xml
+  - Open Eclipse 
+     - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
+     - Select the right project
+  - Choose the Spring Boot Application file (search for file with @SpringBootApplication)
+  - Right Click on the file and Run as Java Application
+  - You are all Set
+  - For help : use our installation guide - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+
+## Next Steps
+- Angular
+  - https://angular.io/guide/quickstart
+  - https://angular.io/tutorial/toh-pt0
+- TypeScript 
+  - https://learnxinyminutes.com/docs/typescript/
+  - http://www.typescriptlang.org/docs/handbook/basic-types.html
+  - https://devhints.io/typescript 
+- Modern JavaScript 
+  - https://github.com/mbeaudru/modern-js-cheatsheet#tdz_sample
+  - https://learnxinyminutes.com/docs/javascript/
+  - https://github.com/mjavascript/mastering-modular-javascript/blob/master/chapters/ch01.asciidoc
+- More References
+  - https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html#ixzz5UozFe9Bu
+  - https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8
