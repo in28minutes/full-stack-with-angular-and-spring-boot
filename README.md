@@ -14,14 +14,15 @@ Spring Boot is an awesome framework to build RESTful API and Microservices.
 
 In this course, lets combine these awesome frameworks to create your first full stack web application.
 
-## Installation Guides and Getting Started References
+## Installation Guides
 
+Required Tools
 - Node v8+ for npm
 - Visual Studio Code - Latest Version
-- Eclipse - Oxygen+
-- (Embedded Maven From Eclipse)
+- Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
+- Connectivity to Internet
 
-### Installing Node Js (npm) & Visual Studion Code
+### Installing Node Js (npm) & Visual Studio Code
 - Installation Playlist : https://www.youtube.com/playlist?list=PLAYLIST
 
 ### Installing Eclipse & Embedded Maven
@@ -1200,8 +1201,13 @@ AutomationTests -- Protractor
 ```
 
 ## Todo
+- JavaScript
+  - Object Review {property1, property2}
+  - Object Clone overview
+
 - What is npm?
 - What is WebPack?
+- Common Error Handling and Server Side Validation and Other REST API Features?
 - What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? ```\src\main.ts```, ```\src\polyfills.ts```, ```\src\styles.css```, ```\src\**\*.component.css```
 - How can I rollback changes made by Angular CLI?
 - How can you learn to write tests for Angular? 
