@@ -16,7 +16,8 @@ In this course, lets combine these awesome frameworks to create your first full 
 
 ## Installation Guides
 
-Required Tools
+#### Required Tools
+
 - Node v8+ for npm
 - Visual Studio Code - Latest Version
 - Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
