@@ -21,7 +21,6 @@ In this course, lets combine these awesome frameworks to create your first full 
 - Node v8+ for npm
 - Visual Studio Code - Latest Version
 - Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
-- Connectivity to Internet
 
 #### Installing Node Js (npm) & Visual Studio Code 
 
@@ -92,41 +91,41 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - We will help you learn the basics of Modern JavaScript, TypeScript, Spring Boot and JPA.
 
 ### Step Wise Details
-- 01 Step 01: 
-- 01 Step 02: 
-- 01 Step 03: 
-- 01 Step 04: 
-- 01 Step 05: 
-- 01 Step 06: 
-- 01 Step 07: 
-- 01 Step 08: 
-- 01 Step 09: 
-- 01 Step 10: 
-- 01 Step 11: 
-- 01 Step 12: 
-- 01 Step 13: 
-- 01 Step 14: 
-- 01 Step 15: 
-- 01 Step 16: 
-- 01 Step 17: 
-- 01 Step 18: 
-- 01 Step 19: 
-- 01 Step 20: 
-- 01 Step 21: 
-- 01 Step 22: 
-- 01 Step 23: 
-- 01 Step 24: 
-- 01 Step 25: 
-- 01 Step 26: 
-- 01 Step 27: 
-- 01 Step 28: 
-- 01 Step 29: 
-- 01 Step 30: 
-- 01 Step 31: 
-- 01 Step 32: 
-- 01 Step 33: 
-- 01 Step 34: 
-- 01 Step 35: 
+- Step 01: Understanding Full Stack Application Architecture
+- Step 02: Quick Overview of Modern JavaScript and TypeScript
+- Step 03: Installing Angular CLI - Awesome Tool to create Angular Projects
+- Step 04: Creating and Launching Angular Application with Angular CLI
+- Step 05: Importing Angular App into Visual Studio Code
+- Step 06: Exploring Angular CLI Commands - test, lint, e2e, serve, build
+- Step 07: Exploring Angular CLI Project Structure
+- Step 08: Introduction to Angular Components - Basics
+- Step 09: Introduction to Angular Components - Playing with AppComponent
+- Step 10: Generating Welcome Component with ng generate
+- Step 11: Language Variations With an Example - Java, JavaScript and TypeScrip
+- Step 12: Generating and Setting up Login Component
+- Step 13: Understanding Event Binding - Adding click event on Login Page
+- Step 14: Using ngModel with 2 Way Data Binding in Login Page
+- Step 15: Quick Review of Data Binding Approaches
+- Step 16: Adding Hardcoded Authentication to Logic Component - ngIf directive
+- Step 17: Implementing Routes for Login, Welcome and Error Components
+- Step 18: Implementing Routing from Login to Welcome Component
+- Step 19: Adding Route Parameter for Welcome Component
+- Step 20: Create List Todos Component with ng generate
+- Step 21: Create a Link to Todos in Welcome Component
+- Step 22: Best Practice - Create a Todo Class 
+- Step 23: Quick Introduction to Angular Modules
+- Step 24: Understanding Bootstrapping of Angular App with Root Module and Component
+- Step 25: Quick Review - Angular Modules and Components
+- Step 26: Overview of Next Few Steps - Bootstrap, Menu, Footer and Refactoring
+- Step 27: Adding Bootstrap Framework and Creating Components for Menu and Footer
+- Step 28: Using Bootstrap to Create a Menu with Navigation Links
+- Step 29: Styling Footer and Other Components with CSS and Bootstrap
+- Step 30: Good Practice - Use RouterLink instead of href for Routes
+- Step 31: Creating an Independent Authentication Service Component
+- Step 32: Using Session Storage to Store User Authentication Token
+- Step 33: Enabling Menu Links Based on User Authentication Token
+- Step 34: 
+- Step 35: 
 
 ```sh
 for file in *; do mv "${file}" "${file//-/ }";
