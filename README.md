@@ -72,14 +72,15 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 ### What You will learn
 
 - You will develop your first full stack application with Angular and Spring Boot
-- You will learn the basic of Angular - Angular Modules, Components, Data Binding and Routing- You will learn basics of building awesome frontend applications with Angular
+- You will learn the basic of Angular - Angular Modules, Components, Data Binding and Routing
+- You will learn basics of building awesome frontend applications with Angular
 - You will be introduced to building great RESTful APIs with Spring Boot
 - You will learn to use Spring Security to configure Basic Authentication and JWT
 - You will learn to solve the challenges of connecting an Angular Frontend to a RESTful API
 - You will learn to connect REST API to JPA/Hibernate with Spring Boot
 - You will learn to use a wide variety of Spring Boot Starter Projects - Spring Boot Web, and Spring Boot Data JPA
 - You will understand the best practices in designing RESTful web services
-- You will develop a Todo Management Application step by step with login and logout functionalities
+- You will develop a Todo Management Full Stack Application step by step with login and logout functionalities
 - You will learn the magic of Spring Boot - Auto Configuration, Spring Initializr and Starter Projects
 - You will understand how to make best use of Spring Boot Actuator and Spring Boot Developer Tools
 - You will understand and use the embedded servlet container options provided by Spring Boot
@@ -94,7 +95,7 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 
 ### Step Wise Details
 
-#### Overview
+#### Quick Overview
 
 - Step 01 - Understanding Full Stack Application Architecture
 - Step 02 - Quick Overview of Modern JavaScript and TypeScript
@@ -207,6 +208,34 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 92 - Setting up Todo Entity and Populating Data
 - Step 93 - Connecting GET REST APIs to JPA Repository
 - Step 94 - Connecting POST, PUT and DELETE REST APIs to JPA Repository
+
+#### Spring Boot in 10 Steps
+
+- Introduction to Spring Boot in 10 Steps
+- Step 01 - Introduction to Spring Boot - Goals and Important Features
+- Step 02 - Developing Spring Applications before Spring Boot
+- Step 03 - Using Spring Initializr to create a Spring Boot Application
+- Step 04 - Creating a Simple REST Controller
+- Step 05 - What is Spring Boot Auto Configuration?
+- Step 06 - Spring Boot vs Spring vs Spring MVC
+- Step 07 - Spring Boot Starter Projects - Starter Web and Starter JPA
+- Step 08 - Overview of different Spring Boot Starter Projects
+- Step 09 - Spring Boot Actuator
+- Step 10 - Spring Boot Developer Tools
+
+#### First 10 Steps in JPA with H2 in-memory database
+
+- Introduction to JPA in 10 Steps
+- Step 01 - Object Relational Impedence Mismatch - Understanding the problem that JPA solves
+- Step 02 - World before JPA - JDBC, Spring JDBC and myBatis
+- Step 03 - Introduction to JPA
+- Step 04 - Creating a JPA Project using Spring Initializr
+- Step 05 - Defining a JPA Entity - User
+- Step 06 - Defining a Service to manage the Entity - UserService and EntityManager
+- Step 07 - Using a Command Line Runner to save the User to database.
+- Step 08 - Magic of Spring Boot and In Memory Database H2
+- Step 09 - Introduction to Spring Data JPA
+- Step 10 - More JPA Repository - findById and findAll
 
 ```sh
 for file in *; do mv "${file}" "${file//-/ }"; done
