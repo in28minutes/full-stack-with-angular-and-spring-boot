@@ -96,465 +96,125 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 
 #### Overview
 
-- Step 01: Understanding Full Stack Application Architecture
-- Step 02: Quick Overview of Modern JavaScript and TypeScript
-- Step 03: Installing Angular CLI - Awesome Tool to create Angular Projects
-- Step 04: Creating and Launching Angular Application with Angular CLI
-- Step 05: Importing Angular App into Visual Studio Code
-- Step 06: Exploring Angular CLI Commands - test, lint, e2e, serve, build
-- Step 07: Exploring Angular CLI Project Structure
+- Step 01 - Understanding Full Stack Application Architecture
+- Step 02 - Quick Overview of Modern JavaScript and TypeScript
+- Step 03 - Installing Angular CLI - Awesome Tool to create Angular Projects
+- Step 04 - Creating and Launching Angular Application with Angular CLI
+- Step 05 - Importing Angular App into Visual Studio Code
+- Step 06 - Exploring Angular CLI Commands - test, lint, e2e, serve, build
+- Step 07 - Exploring Angular CLI Project Structure
 
 #### Getting Hands on With Angular
 
-- Step 08: Introduction to Angular Components - Basics
-- Step 09: Introduction to Angular Components - Playing with AppComponent
-- Step 10: Generating Welcome Component with ng generate
-- Step 11: Language Variations With an Example - Java, JavaScript and TypeScript
-- Step 12: Generating and Setting up Login Component
-- Step 13: Understanding Event Binding - Adding click event on Login Page
-- Step 14: Using ngModel with 2 Way Data Binding in Login Page
-- Step 15: Quick Review of Data Binding Approaches
-- Step 16: Adding Hardcoded Authentication to Logic Component - ngIf directive
-- Step 17: Implementing Routes for Login, Welcome and Error Components
-- Step 18: Implementing Routing from Login to Welcome Component
-- Step 19: Adding Route Parameter for Welcome Component
-- Step 20: Create List Todos Component with ng generate
-- Step 21: Create a Link to Todos in Welcome Component
-- Step 22: Best Practice - Create a Todo Class 
-- Step 23: Quick Introduction to Angular Modules
-- Step 24: Understanding Bootstrapping of Angular App with Root Module and Component
-- Step 25: Quick Review - Angular Modules and Components
-- Step 26: Overview of Next Few Steps - Bootstrap, Menu, Footer and Refactoring
-- Step 27: Adding Bootstrap Framework and Creating Components for Menu and Footer
-- Step 28: Using Bootstrap to Create a Menu with Navigation Links
-- Step 29: Styling Footer and Other Components with CSS and Bootstrap
-- Step 30: Good Practice - Use RouterLink instead of href for Routes
-- Step 31: Creating an Independent Authentication Service Component
-- Step 32: Using Session Storage to Store User Authentication Token
-- Step 33: Enabling Menu Links Based on User Authentication Token
-- Step 34: Implementing Logout to remove User Authentication Token
-- Step 35: Securing Components using Route Guards - Part 1
-- Step 36: Securing Components using Route Guards - Part 2
-- Step 37: Quick Review - Authentication Service, Dependency Injection and Route Guards
+- Step 08 - Introduction to Angular Components - Basics
+- Step 09 - Introduction to Angular Components - Playing with AppComponent
+- Step 10 - Generating Welcome Component with ng generate
+- Step 11 - Language Variations With an Example - Java, JavaScript and TypeScript
+- Step 12 - Generating and Setting up Login Component
+- Step 13 - Understanding Event Binding - Adding click event on Login Page
+- Step 14 - Using ngModel with 2 Way Data Binding in Login Page
+- Step 15 - Quick Review of Data Binding Approaches
+- Step 16 - Adding Hardcoded Authentication to Logic Component - ngIf directive
+- Step 17 - Implementing Routes for Login, Welcome and Error Components
+- Step 18 - Implementing Routing from Login to Welcome Component
+- Step 19 - Adding Route Parameter for Welcome Component
+- Step 20 - Create List Todos Component with ng generate
+- Step 21 - Create a Link to Todos in Welcome Component
+- Step 22 - Best Practice - Create a Todo Class 
+- Step 23 - Quick Introduction to Angular Modules
+- Step 24 - Understanding Bootstrapping of Angular App with Root Module and Component
+- Step 25 - Quick Review - Angular Modules and Components
+- Step 26 - Overview of Next Few Steps - Bootstrap, Menu, Footer and Refactoring
+- Step 27 - Adding Bootstrap Framework and Creating Components for Menu and Footer
+- Step 28 - Using Bootstrap to Create a Menu with Navigation Links
+- Step 29 - Styling Footer and Other Components with CSS and Bootstrap
+- Step 30 - Good Practice - Use RouterLink instead of href for Routes
+- Step 31 - Creating an Independent Authentication Service Component
+- Step 32 - Using Session Storage to Store User Authentication Token
+- Step 33 - Enabling Menu Links Based on User Authentication Token
+- Step 34 - Implementing Logout to remove User Authentication Token
+- Step 35 - Securing Components using Route Guards - Part 1
+- Step 36 - Securing Components using Route Guards - Part 2
+- Step 37 - Quick Review - Authentication Service, Dependency Injection and Route Guards
+
+#### Introduction to Web Services and REST
+
+- Step 41 - What is a Web Service?
+- Step 42 - Important How Questions related to Web Services
+- Step 43 - Web Services - Key Terminology
+- Step 44 - Introduction to RESTful Web Services
+
+#### Getting Up and Running with REST and Spring Boot
+
+- Step 45 - Initializing a RESTful Services Project with Spring Boot
+- Step 46 - Creating a Hello World Service
+- Step 47 - Enhancing the Hello World Service to return a Bean
+- Step 48 - Quick Review of Spring Boot Auto Configuration and Dispatcher Servlet - What's happening in the background?
+- Step 49 - Enhancing the Hello World Service with a Path Variable
+
+#### Connecting Angular Frontend to Spring Boot Restful Services
+
+- Step 50 - Connecting Angular Frontend with Restful API - 1 - Creating Data Service
+- Step 51 - Connecting Angular Frontend with Restful API - 2 - HttpClientModule and HttpClient
+- Step 52 - Connecting Angular Frontend with Restful API - 3 - Understanding Observable
+- Step 53 - Connecting Angular Frontend with Restful API - 4 - Understanding Subscribe
+- Step 54 - Connecting Angular Frontend with Restful API - 5 - Handling Error Responses
+- Step 55 - Calling Welcome HTTP Service with Path Variables
+- Step 56 - Designing RESTful Services for Todo Resource
+- Step 57 - Creating REST API for retrieving Todo List
+- Step 58 - Connecting Angular Frontend with Todo List RESTful Service
+- Step 59 - Creating REST API to delete a Todo - DELETE Request Method
+- Step 60 - Adding Delete Todo Feature to Angular Frontend
+- Step 61 - Creating Todo Component and Handle Routing
+- Step 62 - Designing Todo Page with Bootstrap Framework
+- Step 63 - Creating Retrieve Tod0 Service and Connect Angular Frontend
+- Step 64 - Improve Todo Page Appearance
+- Step 65 - Creating REST API for Updating Todo - PUT Request Method
+- Step 66 - Creating REST API for Creating a Todo - POST Request Method
+- Step 67 - Implementing Update Todo Feature in Angular Frontend
+- Step 68 - Implementing New Todo Feature in Angular Frontend
+- Step 69 - Improving Todo Form - Validation and Form Submit on Enter - ngSubmit
+- Step 70 - Enhancing Validation Messages on Todo Page
+
+#### Implementing Spring Security with Basic Authentication
+
+- Step 71 - Overview of Security with Basic Auth and JWT
+- Step 72 - Setting up Spring Security
+- Step 73 - Configure standard userid and password
+- Step 74 - Enhancing Angular Welcome Data Service to use Basic Auth
+- Step 75 - Configure Spring Security to disable CSRF and enable OPTION Requests
+- Step 76 - Creating Angular HttpInterceptor to add Basic Auth Header
+- Step 77 - Configure HttpInterceptor as Provider in App Module
+- Step 78 - Create Basic Authentication RESTful Service in Spring Boot
+- Step 79 - Create Angular Basic Authentication Service
+- Step 80 - Connect Login Page to Basic Authentication Service - Part 1
+- Step 81 - Connect Login Page to Basic Authentication Service - Part 2
+- Step 82 - Refactoring Angular Basic Authentication Service
+- Step 83 - Refactoring HttpInterceptor to use Basic Authentication Token
+- Step 84 - Best Practice - Use Constants for URLs and Tokens
+
+#### Connecting Spring Security with JWT
+- Step 85 - Introduction to JWT
+- Step 86 - Importing JWT Framework into Eclipse
+- Step 87 - Quick Tip - Resolving JWT Compilation Errors
+- Step 88 - Executing JWT Resources - Get Token and Refresh Token
+- Step 89 - Understanding JWT Spring Security Framework Setup
+- Step 90 - Creating a New User with Encoded Password
+- Step 91 - Using JWT Token in Angular Frontend
+
+#### Connecting REST API With JPA and Hibernate
+
+- Step 92 - Setting up Todo Entity and Populating Data
+- Step 93 - Connecting GET REST APIs to JPA Repository
+- Step 94 - Connecting POST, PUT and DELETE REST APIs to JPA Repository
 
 ```sh
-for file in *; do mv "${file}" "${file//-/ }";
-for file in *; do mv "${file}" "${file//   / - }";
-for file in *; do mv "${file}" "${file//01 Step/Step}";
+for file in *; do mv "${file}" "${file//-/ }"; done
+for file in *; do mv "${file}" "${file//   / - }"; done
+for file in *; do mv "${file}" "${file//01 Step/Step}"; done
 ```
-
-### Course Recording Notes
-
- #### Preview Video
-- Welcome to course on *** in ** simple steps.
-- I'm Ranga Karanam. I've so and so much experience with ... I've been using this framework for ...
-- At in28minutes, we ask one question everyday - How to create more effective courses? All our success - *** students on Udemy and *** subscribers on Youtube - is a result of this pursuit of excellence.
-- You will develop *** and *** using ***
-- You will  learn the basics like *** and move on to the advanced concepts like ***.
-- You will use 
-  - ... todo ...
-  - Maven for dependency management, building and running the application in tomcat.
-  - Eclipse IDE
-- All the code for this course and the step by step details are in our Github repository. 
-- We have an awesome installation guide to help you install Maven and Eclipse. You are NOT expected to have any experience with Eclipse, Maven, or Tomcat.
-- What are we waiting for? Lets have some fun with *** in *** steps. We had a lot of fun creating this course for you and We are confident that you will have a lot of fun. I hope you are as excited as we are to learn more. Go ahead and enroll for the course. Or take a test drive with a free preview. See you in the course.
-
-#### Course Intro Video
-- Welcome to this course on ***. We are excited to teach you how to build awesome ***. 
-- In this video, we introduce you to the different sections of the course. By the end of the video you should have a clear idea of how to make the best use of the course.
-- We have organized this course into 6 different sections. We have designed each section to be independent of each other. That means, you have the flexibility of customizing the course based on your skills and your needs. 
-- If you have experience with Spring and Spring Boot, you can skip these sections.
-- Lets get a quick overview of each of the sections now:
-  - Section I is an one hour introduction to Spring 
-  - Section II is an one hour introduction to Spring Boot..
-- In summary this is your course. Feel free to create your own path and tailor it to your needs.
-- I will see you in the next video where we introduce you to our github repository
-
-#### Overview of the Github Repository
-- Welcome Back. In this video, we give you an overview of how our github repository for this course is organized. 
-- Github repository for this course is at ****.
-- Home page of the github repository has an overview of the course and installation guide
-- For each hands-on section of the course, we have a seperate folder in the repository. You can see these five folders for *** different sections
-  - Folder 1 contains ...
-  - Folder 2 contains ...
-  - Folder 3 contains ...
-- Each of these folders contain
-  - Step by Step details of the sections
-  - Complete code example at the end of the section
-  - Intermediate backups at different stages of the section
-  - Useful Links
-- For example, let's look at the folder for ***. Home page of the folder contains
-  - Step by step details : What are we going to do in each step
-  - Useful Links : Different links that would be useful during the course
-  - Complete Code, Snippets and Examples : Example code that your can use during the section. For example, If you are using a class and you do not know the package of the class, you can search here and quickly find what you would need.
-  - Intermediate Backups : You can download any of these zips and import them into Eclipse as maven projects. File > Import > Existing Maven Projects.
-  - Understanding our github repository is key part of making best use of this course. I recommend to spend some time with our github repository and I will see you in the next video.
-
-#### Installation of Tools Video
-- In this video, we will help you install all the basic tools to get you started with the course
-- We use 
-  - Maven for Dependency Management
-  - Eclipse as IDE
-  - ..
-- Step by step details to install Java, Eclipse and Maven are in the installation guide present here. Also included are links to 5 videos that will help you to install and trouble shoot installations.
-- If you have any problems during the course, we recommend you to look at the troubleshooting section of the installation playlist.
-- Get your tools ready and I will see you in the course
-
-#### Each Section Introduction
-- Why is this section important to the course?
--  What is discussed in this section?
-- What is the github folder for this section?
-- Can a student skip this sections?
-- Is there a trouble shooting guide?
-- What are the backups available?
-- Are examples in this section dependent on any other section?
-
-#### Conclusion Video
-- Congratulations! You have successfully completed the course on ... We covered a wide range of topics starting from Spring, Spring Boot to ..... I'm sure you had a lot of fun doing this course. If you loved this course, we would love to hear from you. Do not forget to leave us a review. Until we see you in another in28minutes course, here's bye from the team here at in28minutes.
-- To find out more about *** use these References  
-
-## Templates
-
-### Welcome Message
-```
-
-## ADD A FEW SAMPLE REVIEWS AFter a couple of months
-## ADD A FEW SAMPLE REVIEWS - in the description of the course 
-
-Congratulations on joining this course from in28Minutes. 
-
-We have 14,000+ 5 Star reviews on our courses.  
-
-I hope that by the time you are prompted to leave a review, that you think this course is an amazing course and can write a few sentences about what you like about the course for future students to see.
-
-There are three things you need to understand before you start this course!
-
-1...... Listen + See + Do Hands-on + Repeat = 90% Retention
-For the first 2 hours, we repeat a few concepts to help you retain them. .
-
-2...... Set Yourself a Goal
-Set 1 hour aside every day for the next week for this course! No exceptions allowed :) 
-
-3...... Udemy asks you for a review very early in the course! If you are not ready for giving a review, you can skip giving a review.
-
-Thank you and enjoy the course,
-Ranga
-```
-
-### Thank You for completing the course message
-
-```
-Congratulations on completing the course from in28Minutes.
-
-We have 14,000+ 5 Star reviews on our courses. We hope you think this course is an amazing course and can write a few sentences about what you like about the course for future students to see.
-
-Good Luck for your future.
-
-Ranga from in28Minutes
-```
-
-### Bonus Lectures  
-
-TITLE : Bonus Lecture : Coupons for My Best-Selling Courses -30 Day Money Back Guarantee
-
-```
-I hope you enjoyed it! 
-
-Connect and share your success (Course Completion Certificate) on Linked In - https://www.linkedin.com/in/rangakaranam/
-
-Here are coupons for many of my best-selling courses. Please click the images/courses below to watch the course video previews (all of these courses have 30-day 100% money back guarantees):
-
-- Copy relevant courses from https://github.com/in28minutes/learn
-
-```
-
-### Other Courses
-- 300+ Videos and Courses - https://github.com/in28minutes/learn
-- [25 Videos and Articles for Beginners on Spring Boot](http://www.springboottutorial.com/spring-boot-tutorials-for-beginners)
-
-## About in28Minutes
-- At in28Minutes, we ask ourselves one question everyday. How do we help you learn effectively - that is more quickly and retain more of what you have learnt?
-- We use Problem-Solution based Step-By-Step Hands-on Approach With Practical, Real World Application Examples. 
-- Our success on Udemy and Youtube (2 Million Views & 12K Subscribers) speaks volumes about the success of our approach.
-- While our primary expertise is on Development, Design & Architecture Java & Related Frameworks (Spring, Struts, Hibernate) we are expanding into the front-end world (Bootstrap, JQuery, Angular JS). 
-
-### Our Beliefs
-- Best Courses are interactive and fun.
-- Foundations for building high quality applications are best laid down while learning.
-
-### Our Approach
-- Problem Solution based Step by Step Hands-on Learning
-- Practical, Real World Application Examples.
-- We use 80-20 Rule. We discuss 20% things used 80% of time in depth. We touch upon other things briefly equipping you with enough knowledge to find out more on your own. 
-- We will be developing a demo application in the course, which could be reused in your projects, saving hours of your effort.
-- We love open source and therefore, All our code is open source too and available on Github.
-
-
-#### Troubleshooting
-
-```
-Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ node -v
-
-Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ npm -v
-6.4.1
-
-#Global
-npm uninstall -g angular-cli
-npm cache verify
-npm install -g @angular/cli@7.0.3
-
-#Inside the project - If you had an earlier version of angular cli
-rm -rf node_modules
-npm uninstall --save-dev angular-cli
-npm install --save-dev @angular/cli@latest
-npm install
-```
-- Why Visual Studio Code?
-  - https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0k2kj45,%2Fm%2F0_x5x3g,%2Fm%2F0134xwrk,%2Fm%2F0b6h18n
-- We use Light Theme
-- Install
-    - Auto Import - Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript and TSX
-    - Reload to Activate
-
-## What You will Learn?
-
-### Big Picture
-- What is the High Level Architecture of our Full Stack Application?
-- What is an SPA?
-- What is Angular?
-
-### TypeScript and JavaScript
-- I'm new to TypeScript. Will I be able to adapt to it?
-- How does a JavaScript Class compare to a Java Class?
-  - Packages vs Modules
-  - import statements
-  - Decorator vs Annotation
-- What is a JavaScript Module?
-- What does TypeScript add on top of JavaScript?
-- How does JavaScript Syntax compare to Java Syntax?
-  - Arrays - Filtering, Spread Operator and Functional Stuff
-  - Custom Objects
-
-### Angular Basics 
-- What is Angular Component?
-- How is Angular Component implemented?
-  - Play with Selector, Template and Styles
-- What are the conventions for file extensions in Angular Projects?
-- What is Angular Module? Why do we need Modules? What are inbuilt Modules in Angular?
-How are they different from JavaScript Modules? 
-- How is an Angular Module implemented? 
-- How can I use a component which is built into another module? 
-- How do you build forms in Angular? How do you do Form Validation?
-- What is Data Binding?
-- What is Routing?
-- How do you implement Routing in Angular?
-- How do you call HTTP Services in Angular?
-- What is Dependency Injection?
-- What is a Service?
-- Where do you store static content in Angular Projects? src\assets folder
-
-### Running Angular Applications
-- What is 'ng serve'? What does it enable for developers?
-- What is Root Module? What are Bootstrap Components? How is the Angular Application Bootstrapped?  ```\src\index.html```, ```\src\main.ts```, ```AppModule```, ```AppComponent```
-- Do Browsers understand TypeScript? How does TypeScript code get converted to JavaScript code? ```\tsconfig.json```, ```\src\tsconfig.app.json```, ```\src\tsconfig.spec.json```
-- What are ```angular.json```, ```package.json```, ```\node_modules? 
-
-## Automated Tests and Code Quality
-- What are unit tests? How are unit tests organized in Angular? How is different from Java?
-- How can you run tests? ```\src\karma.conf.ts```
-- What are coding standards? How can you check coding standards for Angular Cli Project? What is Lint? What is Linting? Is there a Standard Style Guide for Angular? ```\tslint.json```
-- How can I run coding standards check for Angular Projects?
-- What are end to end tests? How are end to end tests organized in Angular? How can you run end to end tests? e2e folder
-
-## Course Details
-
-
-### Request URLs and Examples
-
-#### Common Headers
-
-```
-Origin - http://localhost:4200
-Content-Type - application/json
-Authorization 
-- Bearer *** or
-- Basic *****
-```
-
-
-#### Retrieve all todos for a user 
-
-- GET - http://localhost:8080/users/in28minutes/todos
-
-```
-[
-  {
-    id: 1,
-    username: "in28minutes",
-    description: "Learn to Dance 2",
-    targetDate: "2018-11-09T12:05:18.647+0000",
-   : false,
-  },
-  {
-    id: 2,
-    username: "in28minutes",
-    description: "Learn about Microservices 2",
-    targetDate: "2018-11-09T12:05:18.647+0000",
-   : false,
-  },
-  {
-    id: 3,
-    username: "in28minutes",
-    description: "Learn about Angular",
-    targetDate: "2018-11-09T12:05:18.647+0000",
-   : false,
-  },
-]
-```
-
-#### Retrieve a specific todo
-
-- GET - http://localhost:8080/users/in28minutes/todos/1
-
-```
-{
-  id: 1,
-  username: "in28minutes",
-  description: "Learn to Dance 2",
-  targetDate: "2018-11-09T12:05:18.647+0000",
- : false,
-}
-```
-
-#### Creating a new todo
-
-- POST to http://localhost:8080/users/in28minutes/todos with BODY of Request given below
-
-```
-{
-  "username": "in28minutes",
-  "description": "Learn to Drive a Car",
-  "targetDate": "2018-11-09T10:49:23.566+0000",
-  "done": false
-}
-```
-
-#### Updating a new todo
-
-- http://localhost:8080/users/in28minutes/todos/1 with BODY of Request given below
-
-```
-{
-  "id": 1
-  "username": "in28minutes",
-  "description": "Learn to Drive a Car",
-  "targetDate": "2018-11-09T10:49:23.566+0000",
-  "done": false
-}
-```
-
-#### Delete todo
-
-- DELETE to http://localhost:8080/users/in28minutes/todos/1
-
-### JWT Authenticate
-
-- POST to http://localhost:8080/authenticate
-
-
-```
-{
-  "username":"ranga",
-  "password":"password@!23@#!"
-}
-```
-
-Response
-
-```
-{
-"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYW5nYSIsImV4cCI6MTU0MjQ3MjA3NCwiaWF0IjoxNTQxODY3Mjc0fQ.kD6UJQyxjSPMzAhoTJRr-Z5UL-FfgsyxbdseWQvk0fLi7eVXAKhBkWfj06SwH43sY_ZWBEeLuxaE09szTboefw"
-}
-```
-
-Other URLS
-- Refresh - http://localhost:8080/authenticate
-
-
-  
-### Useful Links
-- [Our Website](http://www.in28minutes.com)
-- [Facebook](http://facebook.com/in28minutes)
-- [Twitter](http://twitter.com/in28minutes)
-- [Google Plus](https://plus.google.com/u/3/110861829188024231119)
 
 ## Code Snippets
-
-### Todo Service - Business Logic
-
-```java
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
-import com.in28minutes.todoservices.Todo;
-
-@Service
-public class TodoService {
-  private static List<Todo> todos = new ArrayList<Todo>();
-  private static long todoCount = 3;
-
-  static {
-    todos.add(new Todo(1l, "in28minutes", "Learn Spring MVC", new Date(),
-        false));
-    todos.add(new Todo(2l, "in28minutes", "Learn Struts", new Date(), false));
-    todos.add(new Todo(3l, "in28minutes", "Learn Hibernate", new Date(),
-        false));
-  }
-
-  public List<Todo> retrieveTodos(String username) {
-    List<Todo> filteredTodos = new ArrayList<Todo>();
-    for (Todo todo : todos) {
-      if (todo.getUsername().equals(username))
-        filteredTodos.add(todo);
-    }
-    return filteredTodos;
-  }
-
-  public Todo retrieveTodo(int id) {
-    for (Todo todo : todos) {
-      if (todo.getId() == id)
-        return todo;
-    }
-    return null;
-  }
-
-  public void updateTodo(Todo todo) {
-    todos.remove(todo);
-    todos.add(todo);
-  }
-
-  public Todo addTodo(String name, String desc, Date targetDate,
-      boolean isDone) {
-    Todo todo = new Todo(++todoCount, name, desc, targetDate, isDone);
-    todos.add(todo);
-    return todo;
-  }
-
-  public void deleteTodo(int id) {
-    Iterator<Todo> iterator = todos.iterator();
-    while (iterator.hasNext()) {
-      Todo todo = iterator.next();
-      if (todo.getId() == id) {
-        iterator.remove();
-      }
-    }
-  }
-}
-```
 
 ### Core JWT Components
 
@@ -1012,6 +672,352 @@ public class JwtTokenResponse implements Serializable {
 }
 ```
 ---
+
+### Course Recording Notes
+
+ #### Preview Video
+- Welcome to course on *** in ** simple steps.
+- I'm Ranga Karanam. I've so and so much experience with ... I've been using this framework for ...
+- At in28minutes, we ask one question everyday - How to create more effective courses? All our success - *** students on Udemy and *** subscribers on Youtube - is a result of this pursuit of excellence.
+- You will develop *** and *** using ***
+- You will  learn the basics like *** and move on to the advanced concepts like ***.
+- You will use 
+  - ... todo ...
+  - Maven for dependency management, building and running the application in tomcat.
+  - Eclipse IDE
+- All the code for this course and the step by step details are in our Github repository. 
+- We have an awesome installation guide to help you install Maven and Eclipse. You are NOT expected to have any experience with Eclipse, Maven, or Tomcat.
+- What are we waiting for? Lets have some fun with *** in *** steps. We had a lot of fun creating this course for you and We are confident that you will have a lot of fun. I hope you are as excited as we are to learn more. Go ahead and enroll for the course. Or take a test drive with a free preview. See you in the course.
+
+#### Course Intro Video
+- Welcome to this course on ***. We are excited to teach you how to build awesome ***. 
+- In this video, we introduce you to the different sections of the course. By the end of the video you should have a clear idea of how to make the best use of the course.
+- We have organized this course into 6 different sections. We have designed each section to be independent of each other. That means, you have the flexibility of customizing the course based on your skills and your needs. 
+- If you have experience with Spring and Spring Boot, you can skip these sections.
+- Lets get a quick overview of each of the sections now:
+  - Section I is an one hour introduction to Spring 
+  - Section II is an one hour introduction to Spring Boot..
+- In summary this is your course. Feel free to create your own path and tailor it to your needs.
+- I will see you in the next video where we introduce you to our github repository
+
+#### Overview of the Github Repository
+- Welcome Back. In this video, we give you an overview of how our github repository for this course is organized. 
+- Github repository for this course is at ****.
+- Home page of the github repository has an overview of the course and installation guide
+- For each hands-on section of the course, we have a seperate folder in the repository. You can see these five folders for *** different sections
+  - Folder 1 contains ...
+  - Folder 2 contains ...
+  - Folder 3 contains ...
+- Each of these folders contain
+  - Step by Step details of the sections
+  - Complete code example at the end of the section
+  - Intermediate backups at different stages of the section
+  - Useful Links
+- For example, let's look at the folder for ***. Home page of the folder contains
+  - Step by step details : What are we going to do in each step
+  - Useful Links : Different links that would be useful during the course
+  - Complete Code, Snippets and Examples : Example code that your can use during the section. For example, If you are using a class and you do not know the package of the class, you can search here and quickly find what you would need.
+  - Intermediate Backups : You can download any of these zips and import them into Eclipse as maven projects. File > Import > Existing Maven Projects.
+  - Understanding our github repository is key part of making best use of this course. I recommend to spend some time with our github repository and I will see you in the next video.
+
+#### Installation of Tools Video
+- In this video, we will help you install all the basic tools to get you started with the course
+- We use 
+  - Maven for Dependency Management
+  - Eclipse as IDE
+  - ..
+- Step by step details to install Java, Eclipse and Maven are in the installation guide present here. Also included are links to 5 videos that will help you to install and trouble shoot installations.
+- If you have any problems during the course, we recommend you to look at the troubleshooting section of the installation playlist.
+- Get your tools ready and I will see you in the course
+
+#### Each Section Introduction
+- Why is this section important to the course?
+-  What is discussed in this section?
+- What is the github folder for this section?
+- Can a student skip this sections?
+- Is there a trouble shooting guide?
+- What are the backups available?
+- Are examples in this section dependent on any other section?
+
+#### Conclusion Video
+- Congratulations! You have successfully completed the course on ... We covered a wide range of topics starting from Spring, Spring Boot to ..... I'm sure you had a lot of fun doing this course. If you loved this course, we would love to hear from you. Do not forget to leave us a review. Until we see you in another in28minutes course, here's bye from the team here at in28minutes.
+- To find out more about *** use these References  
+
+## Templates
+
+### Welcome Message
+```
+
+## ADD A FEW SAMPLE REVIEWS AFter a couple of months
+## ADD A FEW SAMPLE REVIEWS - in the description of the course 
+
+Congratulations on joining this course from in28Minutes. 
+
+We have 14,000+ 5 Star reviews on our courses.  
+
+I hope that by the time you are prompted to leave a review, that you think this course is an amazing course and can write a few sentences about what you like about the course for future students to see.
+
+There are three things you need to understand before you start this course!
+
+1...... Listen + See + Do Hands-on + Repeat = 90% Retention
+For the first 2 hours, we repeat a few concepts to help you retain them. .
+
+2...... Set Yourself a Goal
+Set 1 hour aside every day for the next week for this course! No exceptions allowed :) 
+
+3...... Udemy asks you for a review very early in the course! If you are not ready for giving a review, you can skip giving a review.
+
+Thank you and enjoy the course,
+Ranga
+```
+
+### Thank You for completing the course message
+
+```
+Congratulations on completing the course from in28Minutes.
+
+We have 14,000+ 5 Star reviews on our courses. We hope you think this course is an amazing course and can write a few sentences about what you like about the course for future students to see.
+
+Good Luck for your future.
+
+Ranga from in28Minutes
+```
+
+### Bonus Lectures  
+
+TITLE : Bonus Lecture : Coupons for My Best-Selling Courses -30 Day Money Back Guarantee
+
+```
+I hope you enjoyed it! 
+
+Connect and share your success (Course Completion Certificate) on Linked In - https://www.linkedin.com/in/rangakaranam/
+
+Here are coupons for many of my best-selling courses. Please click the images/courses below to watch the course video previews (all of these courses have 30-day 100% money back guarantees):
+
+- Copy relevant courses from https://github.com/in28minutes/learn
+
+```
+
+### Other Courses
+- 300+ Videos and Courses - https://github.com/in28minutes/learn
+- [25 Videos and Articles for Beginners on Spring Boot](http://www.springboottutorial.com/spring-boot-tutorials-for-beginners)
+
+## About in28Minutes
+- At in28Minutes, we ask ourselves one question everyday. How do we help you learn effectively - that is more quickly and retain more of what you have learnt?
+- We use Problem-Solution based Step-By-Step Hands-on Approach With Practical, Real World Application Examples. 
+- Our success on Udemy and Youtube (2 Million Views & 12K Subscribers) speaks volumes about the success of our approach.
+- While our primary expertise is on Development, Design & Architecture Java & Related Frameworks (Spring, Struts, Hibernate) we are expanding into the front-end world (Bootstrap, JQuery, Angular JS). 
+
+### Our Beliefs
+- Best Courses are interactive and fun.
+- Foundations for building high quality applications are best laid down while learning.
+
+### Our Approach
+- Problem Solution based Step by Step Hands-on Learning
+- Practical, Real World Application Examples.
+- We use 80-20 Rule. We discuss 20% things used 80% of time in depth. We touch upon other things briefly equipping you with enough knowledge to find out more on your own. 
+- We will be developing a demo application in the course, which could be reused in your projects, saving hours of your effort.
+- We love open source and therefore, All our code is open source too and available on Github.
+
+
+#### Troubleshooting
+
+```
+Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ node -v
+
+Rangas-MacBook-Pro:04-10-2018 rangaraokaranam$ npm -v
+6.4.1
+
+#Global
+npm uninstall -g angular-cli
+npm cache verify
+npm install -g @angular/cli@7.0.3
+
+#Inside the project - If you had an earlier version of angular cli
+rm -rf node_modules
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+```
+- Why Visual Studio Code?
+  - https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0k2kj45,%2Fm%2F0_x5x3g,%2Fm%2F0134xwrk,%2Fm%2F0b6h18n
+- We use Light Theme
+- Install
+    - Auto Import - Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript and TSX
+    - Reload to Activate
+
+## What You will Learn?
+
+### Big Picture
+- What is the High Level Architecture of our Full Stack Application?
+- What is an SPA?
+- What is Angular?
+
+### TypeScript and JavaScript
+- I'm new to TypeScript. Will I be able to adapt to it?
+- How does a JavaScript Class compare to a Java Class?
+  - Packages vs Modules
+  - import statements
+  - Decorator vs Annotation
+- What is a JavaScript Module?
+- What does TypeScript add on top of JavaScript?
+- How does JavaScript Syntax compare to Java Syntax?
+  - Arrays - Filtering, Spread Operator and Functional Stuff
+  - Custom Objects
+
+### Angular Basics 
+- What is Angular Component?
+- How is Angular Component implemented?
+  - Play with Selector, Template and Styles
+- What are the conventions for file extensions in Angular Projects?
+- What is Angular Module? Why do we need Modules? What are inbuilt Modules in Angular?
+How are they different from JavaScript Modules? 
+- How is an Angular Module implemented? 
+- How can I use a component which is built into another module? 
+- How do you build forms in Angular? How do you do Form Validation?
+- What is Data Binding?
+- What is Routing?
+- How do you implement Routing in Angular?
+- How do you call HTTP Services in Angular?
+- What is Dependency Injection?
+- What is a Service?
+- Where do you store static content in Angular Projects? src\assets folder
+
+### Running Angular Applications
+- What is 'ng serve'? What does it enable for developers?
+- What is Root Module? What are Bootstrap Components? How is the Angular Application Bootstrapped?  ```\src\index.html```, ```\src\main.ts```, ```AppModule```, ```AppComponent```
+- Do Browsers understand TypeScript? How does TypeScript code get converted to JavaScript code? ```\tsconfig.json```, ```\src\tsconfig.app.json```, ```\src\tsconfig.spec.json```
+- What are ```angular.json```, ```package.json```, ```\node_modules? 
+
+## Automated Tests and Code Quality
+- What are unit tests? How are unit tests organized in Angular? How is different from Java?
+- How can you run tests? ```\src\karma.conf.ts```
+- What are coding standards? How can you check coding standards for Angular Cli Project? What is Lint? What is Linting? Is there a Standard Style Guide for Angular? ```\tslint.json```
+- How can I run coding standards check for Angular Projects?
+- What are end to end tests? How are end to end tests organized in Angular? How can you run end to end tests? e2e folder
+
+## Course Details
+
+
+### Request URLs and Examples
+
+#### Common Headers
+
+```
+Origin - http://localhost:4200
+Content-Type - application/json
+Authorization 
+- Bearer *** or
+- Basic *****
+```
+
+
+#### Retrieve all todos for a user 
+
+- GET - http://localhost:8080/users/in28minutes/todos
+
+```
+[
+  {
+    id: 1,
+    username: "in28minutes",
+    description: "Learn to Dance 2",
+    targetDate: "2018-11-09T12:05:18.647+0000",
+   : false,
+  },
+  {
+    id: 2,
+    username: "in28minutes",
+    description: "Learn about Microservices 2",
+    targetDate: "2018-11-09T12:05:18.647+0000",
+   : false,
+  },
+  {
+    id: 3,
+    username: "in28minutes",
+    description: "Learn about Angular",
+    targetDate: "2018-11-09T12:05:18.647+0000",
+   : false,
+  },
+]
+```
+
+#### Retrieve a specific todo
+
+- GET - http://localhost:8080/users/in28minutes/todos/1
+
+```
+{
+  id: 1,
+  username: "in28minutes",
+  description: "Learn to Dance 2",
+  targetDate: "2018-11-09T12:05:18.647+0000",
+ : false,
+}
+```
+
+#### Creating a new todo
+
+- POST to http://localhost:8080/users/in28minutes/todos with BODY of Request given below
+
+```
+{
+  "username": "in28minutes",
+  "description": "Learn to Drive a Car",
+  "targetDate": "2018-11-09T10:49:23.566+0000",
+  "done": false
+}
+```
+
+#### Updating a new todo
+
+- http://localhost:8080/users/in28minutes/todos/1 with BODY of Request given below
+
+```
+{
+  "id": 1
+  "username": "in28minutes",
+  "description": "Learn to Drive a Car",
+  "targetDate": "2018-11-09T10:49:23.566+0000",
+  "done": false
+}
+```
+
+#### Delete todo
+
+- DELETE to http://localhost:8080/users/in28minutes/todos/1
+
+### JWT Authenticate
+
+- POST to http://localhost:8080/authenticate
+
+
+```
+{
+  "username":"ranga",
+  "password":"password@!23@#!"
+}
+```
+
+Response
+
+```
+{
+"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYW5nYSIsImV4cCI6MTU0MjQ3MjA3NCwiaWF0IjoxNTQxODY3Mjc0fQ.kD6UJQyxjSPMzAhoTJRr-Z5UL-FfgsyxbdseWQvk0fLi7eVXAKhBkWfj06SwH43sY_ZWBEeLuxaE09szTboefw"
+}
+```
+
+Other URLS
+- Refresh - http://localhost:8080/authenticate
+
+
+  
+### Useful Links
+- [Our Website](http://www.in28minutes.com)
+- [Facebook](http://facebook.com/in28minutes)
+- [Twitter](http://twitter.com/in28minutes)
+- [Google Plus](https://plus.google.com/u/3/110861829188024231119)
+
 ## Connection to MySQL
 
 ```
@@ -1233,13 +1239,18 @@ AutomationTests -- Protractor
 - JavaScript
   - Object Review {property1, property2}
   - Object Clone overview
+  - Arrow Operator
 - What is npm?
 - What is WebPack?
 - Common Error Handling and Server Side Validation and Other REST API Features?
+- Common Message Component for RESTful Calls
+- Moving @CrossOrigin to a Common Location
 - What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? ```\src\main.ts```, ```\src\polyfills.ts```, ```\src\styles.css```, ```\src\**\*.component.css```
 - How can I rollback changes made by Angular CLI?
 - How can you learn to write tests for Angular? 
 - How can you learn to write end to end tests for Angular?
+- What are Dependency Injection Options other than root?
+- Spring Security Authorization
 - What are the different kinds of Data Binding?
   - /blog/src/app/basics/basics.component.html
   - Angular Specific Syntax
