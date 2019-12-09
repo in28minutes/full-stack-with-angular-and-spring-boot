@@ -1,5 +1,8 @@
 # Your First Full Stack Application with Angular and Spring Boot
 
+[![Image](https://www.springboottutorial.com/images/Course-Go-Full-Stack-With-SpringBoot-And-Angular.png "Go Full Stack with Spring Boot and Angular")](https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/)
+
+
 ## Take your first steps towards becoming a Full Stack Developer with Angular and Spring Boot
 
 Angular is a complete front end framework with a wide range of features
@@ -237,11 +240,6 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 09 - Introduction to Spring Data JPA
 - Step 10 - More JPA Repository - findById and findAll
 
-```sh
-for file in *; do mv "${file}" "${file//-/ }"; done
-for file in *; do mv "${file}" "${file//   / - }"; done
-for file in *; do mv "${file}" "${file//01 Step/Step}"; done
-```
 
 ## Code Snippets
 
@@ -814,7 +812,7 @@ Ranga from in28Minutes
 
 ### Bonus Lectures  
 
-TITLE : Bonus Lecture : Coupons for My Best-Selling Courses -30 Day Money Back Guarantee
+TITLE : Bonus Lecture : Coupons for My Best-Selling Courses 
 
 ```
 I hope you enjoyed it! 
@@ -1335,3 +1333,15 @@ AutomationTests -- Protractor
 - More References
   - https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html#ixzz5UozFe9Bu
   - https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8
+
+
+### Troubleshooting
+- Refer our TroubleShooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
+
+## Youtube Playlists - 500+ Videos
+
+[Click here - 30+ Playlists with 500+ Videos on Spring, Spring Boot, REST, Microservices and the Cloud](https://www.youtube.com/user/rithustutorials/playlists?view=1&sort=lad&flow=list)
+
+## Keep Learning in28Minutes
+
+in28Minutes is creating amazing solutions for you to learn Spring Boot, Full Stack and the Cloud - Docker, Kubernetes, AWS, React, Angular etc. - [Check out all our courses here](https://github.com/in28minutes/learn)
