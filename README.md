@@ -1,11 +1,13 @@
 # Your First Full Stack Application with Angular and Spring Boot
 
-[![Image](https://www.springboottutorial.com/images/Course-Go-Full-Stack-With-SpringBoot-And-Angular.png "Go Full Stack with Spring Boot and Angular")](https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/)
+## Ashu comment
 
+[![Image](https://www.springboottutorial.com/images/Course-Go-Full-Stack-With-SpringBoot-And-Angular.png 'Go Full Stack with Spring Boot and Angular')](https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/)
 
 ## Take your first steps towards becoming a Full Stack Developer with Angular and Spring Boot
 
 Angular is a complete front end framework with a wide range of features
+
 - Strong Module System
 - Strong Component System
 - Forms Handling
@@ -26,7 +28,7 @@ In this course, lets combine these awesome frameworks to create your first full 
 - Java 8+
 - Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
 
-#### Installing Node Js (npm) & Visual Studio Code 
+#### Installing Node Js (npm) & Visual Studio Code
 
 - Playlist - https://www.youtube.com/playlist?list=PLBBog2r6uMCQN4X3Aa_jM9qVjgMCHMWx6
 - Steps
@@ -46,7 +48,7 @@ In this course, lets combine these awesome frameworks to create your first full 
 
 #### Troubleshooting Installations
 
-- Node JS and NPM 
+- Node JS and NPM
   - https://docs.npmjs.com/common-errors
   - https://docs.npmjs.com/getting-started/troubleshooting
 - Visual Studio Code
@@ -57,6 +59,7 @@ In this course, lets combine these awesome frameworks to create your first full 
   - GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
 
 ### Getting Started with Spring, Spring Boot and JPA
+
 - Spring Tutorial for Beginners - https://www.youtube.com/watch?v=edgZo2g-LTM
 - Spring Boot Tutorial for Beginners - https://www.youtube.com/watch?v=pcdpk3Yd1EA
 - JPA and Hibernate Tutorial for Beginners - https://www.youtube.com/watch?v=MaI0_XdpdP8
@@ -64,13 +67,14 @@ In this course, lets combine these awesome frameworks to create your first full 
 ## Course Overview
 
 ### Introduction
+
 Developing your first full stack application with Angular and Spring Boot is fun.
 
 In this course, you will learn the basics of full stack development developing a Basic Todo Management Application using Angular, Spring Boot and Spring Security Frameworks.
 
 You will build the application step by step - in more than 50 steps. This course would be a perfect first step as an introduction to Angular and Full Stack Development.
 
-You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(To create Angular projects), Spring Boot (REST API Framework), Spring (Dependency Management),  Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Node (npm), Visual Studio Code (TypeScript IDE), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
+You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(To create Angular projects), Spring Boot (REST API Framework), Spring (Dependency Management), Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Node (npm), Visual Studio Code (TypeScript IDE), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
 
 ### What You will learn
 
@@ -90,7 +94,7 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 
 ### Requirements
 
-- You should have prior experience with Java, Basic JavaScript and Spring Framework. 
+- You should have prior experience with Java, Basic JavaScript and Spring Framework.
 - You should have Chrome browser installed.
 - We will help you install Eclipse, Visual Studio Code and Node JS(for npm)
 - We will help you install Chrome Restlet Client Plugin
@@ -124,7 +128,7 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 19 - Adding Route Parameter for Welcome Component
 - Step 20 - Create List Todos Component with ng generate
 - Step 21 - Create a Link to Todos in Welcome Component
-- Step 22 - Best Practice - Create a Todo Class 
+- Step 22 - Best Practice - Create a Todo Class
 - Step 23 - Quick Introduction to Angular Modules
 - Step 24 - Understanding Bootstrapping of Angular App with Root Module and Component
 - Step 25 - Quick Review - Angular Modules and Components
@@ -198,6 +202,7 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 84 - Best Practice - Use Constants for URLs and Tokens
 
 #### Connecting Spring Security with JWT
+
 - Step 85 - Introduction to JWT
 - Step 86 - Importing JWT Framework into Eclipse
 - Step 87 - Quick Tip - Resolving JWT Compilation Errors
@@ -239,7 +244,6 @@ You will be using Angular (Frontend Framework), TypeScript Basics, Angular Cli(T
 - Step 08 - Magic of Spring Boot and In Memory Database H2
 - Step 09 - Introduction to Spring Data JPA
 - Step 10 - More JPA Repository - findById and findAll
-
 
 ## Code Snippets
 
@@ -297,10 +301,10 @@ public class JwtTokenAuthorizationOncePerRequestFilter extends OncePerRequestFil
 
     @Autowired
     private UserDetailsService jwtInMemoryUserDetailsService;
-    
+
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
-    
+
     @Value("${jwt.http.request.header}")
     private String tokenHeader;
 
@@ -553,7 +557,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
        httpSecurity
             .addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
-        
+
         httpSecurity
             .headers()
             .frameOptions().sameOrigin()  //H2 Console Needs this setting
@@ -651,7 +655,7 @@ public class AuthenticationException extends RuntimeException {
 }
 
 public class  JwtTokenRequest implements Serializable {
-  
+
   private static final long serialVersionUID = -5616176897013108345L;
 
   private String username;
@@ -698,40 +702,44 @@ public class JwtTokenResponse implements Serializable {
     }
 }
 ```
+
 ---
 
 ### Course Recording Notes
 
- #### Preview Video
-- Welcome to course on *** in ** simple steps.
+#### Preview Video
+
+- Welcome to course on **\* in ** simple steps.
 - I'm Ranga Karanam. I've so and so much experience with ... I've been using this framework for ...
-- At in28minutes, we ask one question everyday - How to create more effective courses? All our success - *** students on Udemy and *** subscribers on Youtube - is a result of this pursuit of excellence.
-- You will develop *** and *** using ***
-- You will  learn the basics like *** and move on to the advanced concepts like ***.
-- You will use 
+- At in28minutes, we ask one question everyday - How to create more effective courses? All our success - **_ students on Udemy and _** subscribers on Youtube - is a result of this pursuit of excellence.
+- You will develop **_ and _** using \*\*\*
+- You will learn the basics like **_ and move on to the advanced concepts like _**.
+- You will use
   - ... todo ...
   - Maven for dependency management, building and running the application in tomcat.
   - Eclipse IDE
-- All the code for this course and the step by step details are in our Github repository. 
+- All the code for this course and the step by step details are in our Github repository.
 - We have an awesome installation guide to help you install Maven and Eclipse. You are NOT expected to have any experience with Eclipse, Maven, or Tomcat.
-- What are we waiting for? Lets have some fun with *** in *** steps. We had a lot of fun creating this course for you and We are confident that you will have a lot of fun. I hope you are as excited as we are to learn more. Go ahead and enroll for the course. Or take a test drive with a free preview. See you in the course.
+- What are we waiting for? Lets have some fun with **_ in _** steps. We had a lot of fun creating this course for you and We are confident that you will have a lot of fun. I hope you are as excited as we are to learn more. Go ahead and enroll for the course. Or take a test drive with a free preview. See you in the course.
 
 #### Course Intro Video
-- Welcome to this course on ***. We are excited to teach you how to build awesome ***. 
+
+- Welcome to this course on **_. We are excited to teach you how to build awesome _**.
 - In this video, we introduce you to the different sections of the course. By the end of the video you should have a clear idea of how to make the best use of the course.
-- We have organized this course into 6 different sections. We have designed each section to be independent of each other. That means, you have the flexibility of customizing the course based on your skills and your needs. 
+- We have organized this course into 6 different sections. We have designed each section to be independent of each other. That means, you have the flexibility of customizing the course based on your skills and your needs.
 - If you have experience with Spring and Spring Boot, you can skip these sections.
 - Lets get a quick overview of each of the sections now:
-  - Section I is an one hour introduction to Spring 
+  - Section I is an one hour introduction to Spring
   - Section II is an one hour introduction to Spring Boot..
 - In summary this is your course. Feel free to create your own path and tailor it to your needs.
 - I will see you in the next video where we introduce you to our github repository
 
 #### Overview of the Github Repository
-- Welcome Back. In this video, we give you an overview of how our github repository for this course is organized. 
-- Github repository for this course is at ****.
+
+- Welcome Back. In this video, we give you an overview of how our github repository for this course is organized.
+- Github repository for this course is at \*\*\*\*.
 - Home page of the github repository has an overview of the course and installation guide
-- For each hands-on section of the course, we have a seperate folder in the repository. You can see these five folders for *** different sections
+- For each hands-on section of the course, we have a seperate folder in the repository. You can see these five folders for \*\*\* different sections
   - Folder 1 contains ...
   - Folder 2 contains ...
   - Folder 3 contains ...
@@ -740,7 +748,7 @@ public class JwtTokenResponse implements Serializable {
   - Complete code example at the end of the section
   - Intermediate backups at different stages of the section
   - Useful Links
-- For example, let's look at the folder for ***. Home page of the folder contains
+- For example, let's look at the folder for \*\*\*. Home page of the folder contains
   - Step by step details : What are we going to do in each step
   - Useful Links : Different links that would be useful during the course
   - Complete Code, Snippets and Examples : Example code that your can use during the section. For example, If you are using a class and you do not know the package of the class, you can search here and quickly find what you would need.
@@ -748,8 +756,9 @@ public class JwtTokenResponse implements Serializable {
   - Understanding our github repository is key part of making best use of this course. I recommend to spend some time with our github repository and I will see you in the next video.
 
 #### Installation of Tools Video
+
 - In this video, we will help you install all the basic tools to get you started with the course
-- We use 
+- We use
   - Maven for Dependency Management
   - Eclipse as IDE
   - ..
@@ -758,8 +767,9 @@ public class JwtTokenResponse implements Serializable {
 - Get your tools ready and I will see you in the course
 
 #### Each Section Introduction
+
 - Why is this section important to the course?
--  What is discussed in this section?
+- What is discussed in this section?
 - What is the github folder for this section?
 - Can a student skip this sections?
 - Is there a trouble shooting guide?
@@ -767,20 +777,22 @@ public class JwtTokenResponse implements Serializable {
 - Are examples in this section dependent on any other section?
 
 #### Conclusion Video
+
 - Congratulations! You have successfully completed the course on ... We covered a wide range of topics starting from Spring, Spring Boot to ..... I'm sure you had a lot of fun doing this course. If you loved this course, we would love to hear from you. Do not forget to leave us a review. Until we see you in another in28minutes course, here's bye from the team here at in28minutes.
-- To find out more about *** use these References  
+- To find out more about \*\*\* use these References
 
 ## Templates
 
 ### Welcome Message
+
 ```
 
 ## ADD A FEW SAMPLE REVIEWS AFter a couple of months
-## ADD A FEW SAMPLE REVIEWS - in the description of the course 
+## ADD A FEW SAMPLE REVIEWS - in the description of the course
 
-Congratulations on joining this course from in28Minutes. 
+Congratulations on joining this course from in28Minutes.
 
-We have 14,000+ 5 Star reviews on our courses.  
+We have 14,000+ 5 Star reviews on our courses.
 
 I hope that by the time you are prompted to leave a review, that you think this course is an amazing course and can write a few sentences about what you like about the course for future students to see.
 
@@ -790,7 +802,7 @@ There are three things you need to understand before you start this course!
 For the first 2 hours, we repeat a few concepts to help you retain them. .
 
 2...... Set Yourself a Goal
-Set 1 hour aside every day for the next week for this course! No exceptions allowed :) 
+Set 1 hour aside every day for the next week for this course! No exceptions allowed :)
 
 3...... Udemy asks you for a review very early in the course! If you are not ready for giving a review, you can skip giving a review.
 
@@ -810,12 +822,12 @@ Good Luck for your future.
 Ranga from in28Minutes
 ```
 
-### Bonus Lectures  
+### Bonus Lectures
 
-TITLE : Bonus Lecture : Coupons for My Best-Selling Courses 
+TITLE : Bonus Lecture : Coupons for My Best-Selling Courses
 
 ```
-I hope you enjoyed it! 
+I hope you enjoyed it!
 
 Connect and share your success (Course Completion Certificate) on Linked In - https://www.linkedin.com/in/rangakaranam/
 
@@ -826,26 +838,29 @@ Here are coupons for many of my best-selling courses. Please click the images/co
 ```
 
 ### Other Courses
+
 - 300+ Videos and Courses - https://github.com/in28minutes/learn
 - [25 Videos and Articles for Beginners on Spring Boot](http://www.springboottutorial.com/spring-boot-tutorials-for-beginners)
 
 ## About in28Minutes
+
 - At in28Minutes, we ask ourselves one question everyday. How do we help you learn effectively - that is more quickly and retain more of what you have learnt?
-- We use Problem-Solution based Step-By-Step Hands-on Approach With Practical, Real World Application Examples. 
+- We use Problem-Solution based Step-By-Step Hands-on Approach With Practical, Real World Application Examples.
 - Our success on Udemy and Youtube (2 Million Views & 12K Subscribers) speaks volumes about the success of our approach.
-- While our primary expertise is on Development, Design & Architecture Java & Related Frameworks (Spring, Struts, Hibernate) we are expanding into the front-end world (Bootstrap, JQuery, Angular JS). 
+- While our primary expertise is on Development, Design & Architecture Java & Related Frameworks (Spring, Struts, Hibernate) we are expanding into the front-end world (Bootstrap, JQuery, Angular JS).
 
 ### Our Beliefs
+
 - Best Courses are interactive and fun.
 - Foundations for building high quality applications are best laid down while learning.
 
 ### Our Approach
+
 - Problem Solution based Step by Step Hands-on Learning
 - Practical, Real World Application Examples.
-- We use 80-20 Rule. We discuss 20% things used 80% of time in depth. We touch upon other things briefly equipping you with enough knowledge to find out more on your own. 
+- We use 80-20 Rule. We discuss 20% things used 80% of time in depth. We touch upon other things briefly equipping you with enough knowledge to find out more on your own.
 - We will be developing a demo application in the course, which could be reused in your projects, saving hours of your effort.
 - We love open source and therefore, All our code is open source too and available on Github.
-
 
 #### Troubleshooting
 
@@ -866,21 +881,24 @@ npm uninstall --save-dev angular-cli
 npm install --save-dev @angular/cli@latest
 npm install
 ```
+
 - Why Visual Studio Code?
   - https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0k2kj45,%2Fm%2F0_x5x3g,%2Fm%2F0134xwrk,%2Fm%2F0b6h18n
 - We use Light Theme
 - Install
-    - Auto Import - Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript and TSX
-    - Reload to Activate
+  - Auto Import - Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript and TSX
+  - Reload to Activate
 
 ## What You will Learn?
 
 ### Big Picture
+
 - What is the High Level Architecture of our Full Stack Application?
 - What is an SPA?
 - What is Angular?
 
 ### TypeScript and JavaScript
+
 - I'm new to TypeScript. Will I be able to adapt to it?
 - How does a JavaScript Class compare to a Java Class?
   - Packages vs Modules
@@ -892,15 +910,16 @@ npm install
   - Arrays - Filtering, Spread Operator and Functional Stuff
   - Custom Objects
 
-### Angular Basics 
+### Angular Basics
+
 - What is Angular Component?
 - How is Angular Component implemented?
   - Play with Selector, Template and Styles
 - What are the conventions for file extensions in Angular Projects?
 - What is Angular Module? Why do we need Modules? What are inbuilt Modules in Angular?
-How are they different from JavaScript Modules? 
-- How is an Angular Module implemented? 
-- How can I use a component which is built into another module? 
+  How are they different from JavaScript Modules?
+- How is an Angular Module implemented?
+- How can I use a component which is built into another module?
 - How do you build forms in Angular? How do you do Form Validation?
 - What is Data Binding?
 - What is Routing?
@@ -911,20 +930,21 @@ How are they different from JavaScript Modules?
 - Where do you store static content in Angular Projects? src\assets folder
 
 ### Running Angular Applications
+
 - What is 'ng serve'? What does it enable for developers?
-- What is Root Module? What are Bootstrap Components? How is the Angular Application Bootstrapped?  ```\src\index.html```, ```\src\main.ts```, ```AppModule```, ```AppComponent```
-- Do Browsers understand TypeScript? How does TypeScript code get converted to JavaScript code? ```\tsconfig.json```, ```\src\tsconfig.app.json```, ```\src\tsconfig.spec.json```
-- What are ```angular.json```, ```package.json```, ```\node_modules? 
+- What is Root Module? What are Bootstrap Components? How is the Angular Application Bootstrapped? `\src\index.html`, `\src\main.ts`, `AppModule`, `AppComponent`
+- Do Browsers understand TypeScript? How does TypeScript code get converted to JavaScript code? `\tsconfig.json`, `\src\tsconfig.app.json`, `\src\tsconfig.spec.json`
+- What are `angular.json`, `package.json`, ```\node_modules?
 
 ## Automated Tests and Code Quality
+
 - What are unit tests? How are unit tests organized in Angular? How is different from Java?
-- How can you run tests? ```\src\karma.conf.ts```
-- What are coding standards? How can you check coding standards for Angular Cli Project? What is Lint? What is Linting? Is there a Standard Style Guide for Angular? ```\tslint.json```
+- How can you run tests? `\src\karma.conf.ts`
+- What are coding standards? How can you check coding standards for Angular Cli Project? What is Lint? What is Linting? Is there a Standard Style Guide for Angular? `\tslint.json`
 - How can I run coding standards check for Angular Projects?
 - What are end to end tests? How are end to end tests organized in Angular? How can you run end to end tests? e2e folder
 
 ## Course Details
-
 
 ### Request URLs and Examples
 
@@ -933,13 +953,12 @@ How are they different from JavaScript Modules?
 ```
 Origin - http://localhost:4200
 Content-Type - application/json
-Authorization 
+Authorization
 - Bearer *** or
 - Basic *****
 ```
 
-
-#### Retrieve all todos for a user 
+#### Retrieve all todos for a user
 
 - GET - http://localhost:8080/users/in28minutes/todos
 
@@ -1018,7 +1037,6 @@ Authorization
 
 - POST to http://localhost:8080/authenticate
 
-
 ```
 {
   "username":"ranga",
@@ -1035,11 +1053,11 @@ Response
 ```
 
 Other URLS
+
 - Refresh - http://localhost:8080/authenticate
 
-
-  
 ### Useful Links
+
 - [Our Website](http://www.in28minutes.com)
 - [Facebook](http://facebook.com/in28minutes)
 - [Twitter](http://twitter.com/in28minutes)
@@ -1051,32 +1069,34 @@ Other URLS
 create sequence hibernate_sequence start with 1 increment by 1
 
 create table todo (
-    id bigint not null, 
-    description varchar(255), 
-    is_done boolean not null, 
-    target_date timestamp, 
-    username varchar(255), 
+    id bigint not null,
+    description varchar(255),
+    is_done boolean not null,
+    target_date timestamp,
+    username varchar(255),
     primary key (id))
 
 ```
+
 ---
 
 launch.json
+
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:4200",//Line Changed
-            "webRoot": "${workspaceFolder}"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:4200", //Line Changed
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
 }
 ```
 
@@ -1087,7 +1107,6 @@ npm install @angular/material @angular/cdk
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 npm install @angular/flex-layout rxjs-compat
 ```
-
 
 ## Diagrams
 
@@ -1207,7 +1226,7 @@ VIEW[label=<DOM <BR />(HTML/View)>];
 //COMPONENT -> VIEW [label=<<FONT POINT-SIZE="25">Property Binding  </FONT> [property]=value >]
 VIEW -> COMPONENT [label = ""]
 COMPONENT -> VIEW  [label=<<FONT POINT-SIZE="25">2 Way Data Binding  </FONT> [(ngModel)]="model.attribute" >]
-}   
+}
 
 graph architecture {
 
@@ -1258,11 +1277,12 @@ AutomationTests -- Karma
 AutomationTests -- Protractor
 
 }
-  
+
 
 ```
 
 ## Todo
+
 - JavaScript
   - Object Review {property1, property2}
   - Object Clone overview
@@ -1272,9 +1292,9 @@ AutomationTests -- Protractor
 - Common Error Handling and Server Side Validation and Other REST API Features?
 - Common Message Component for RESTful Calls
 - Moving @CrossOrigin to a Common Location
-- What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? ```\src\main.ts```, ```\src\polyfills.ts```, ```\src\styles.css```, ```\src\**\*.component.css```
+- What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? `\src\main.ts`, `\src\polyfills.ts`, `\src\styles.css`, `\src\**\*.component.css`
 - How can I rollback changes made by Angular CLI?
-- How can you learn to write tests for Angular? 
+- How can you learn to write tests for Angular?
 - How can you learn to write end to end tests for Angular?
 - What are Dependency Injection Options other than root?
 - Spring Security Authorization
@@ -1283,7 +1303,7 @@ AutomationTests -- Protractor
   - Angular Specific Syntax
     - [class.active]="isActive()"
     - [style.font]="determineFont"
-- How do you build various form elements in Angular? 
+- How do you build various form elements in Angular?
   - /blog/src/app/box/box.component.html
   - /blog/src/app/form/form.component.html
 - What is a Child Component?
@@ -1310,23 +1330,24 @@ AutomationTests -- Protractor
   - Download the zip or clone the Git repository.
   - Unzip the zip file (if you downloaded one)
   - Open Command Prompt and Change directory (cd) to folder containing pom.xml
-  - Open Eclipse 
-     - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-     - Select the right project
+  - Open Eclipse
+    - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
+    - Select the right project
   - Choose the Spring Boot Application file (search for file with @SpringBootApplication)
   - Right Click on the file and Run as Java Application
   - You are all Set
   - For help : use our installation guide - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 
 ## Next Steps
+
 - Angular
   - https://angular.io/guide/quickstart
   - https://angular.io/tutorial/toh-pt0
-- TypeScript 
+- TypeScript
   - https://learnxinyminutes.com/docs/typescript/
   - http://www.typescriptlang.org/docs/handbook/basic-types.html
-  - https://devhints.io/typescript 
-- Modern JavaScript 
+  - https://devhints.io/typescript
+- Modern JavaScript
   - https://github.com/mbeaudru/modern-js-cheatsheet#tdz_sample
   - https://learnxinyminutes.com/docs/javascript/
   - https://github.com/mjavascript/mastering-modular-javascript/blob/master/chapters/ch01.asciidoc
@@ -1334,8 +1355,8 @@ AutomationTests -- Protractor
   - https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html#ixzz5UozFe9Bu
   - https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8
 
-
 ### Troubleshooting
+
 - Refer our TroubleShooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
 
 ## Youtube Playlists - 500+ Videos
