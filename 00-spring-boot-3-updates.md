@@ -58,3 +58,5 @@ Dependency Changes
 	<artifactId>spring-boot-configuration-processor</artifactId>
 </dependency>
 ```
+
+Code Changes - https://github.com/in28minutes/full-stack-with-angular-and-spring-boot#core-jwt-components---spring-boot-3
