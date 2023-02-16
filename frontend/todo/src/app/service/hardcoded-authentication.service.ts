@@ -7,9 +7,9 @@ export class HardcodedAuthenticationService {
 
   constructor() { }
 
-  authenticate(username, password) {
+  authenticate(username: string, password: string) {
     //console.log('before ' + this.isUserLoggedIn());
-    if(username==="in28minutes" && password === 'dummy') {
+    if (username === "in28minutes" && password === 'dummy') {
       sessionStorage.setItem('authenticaterUser', username);
       //console.log('after ' + this.isUserLoggedIn());
       return true;
@@ -22,7 +22,7 @@ export class HardcodedAuthenticationService {
     return !(user === null)
   }
 
-  logout(){
+  logout() {
     sessionStorage.removeItem('authenticaterUser')
   }
 

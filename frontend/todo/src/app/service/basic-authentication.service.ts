@@ -1,7 +1,7 @@
 import { API_URL } from './../app.constants';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {map} from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 export const TOKEN = 'token'
 export const AUTHENTICATED_USER = 'authenticaterUser'
@@ -13,36 +13,36 @@ export class BasicAuthenticationService {
 
   constructor(private http: HttpClient) { }
 
-  executeJWTAuthenticationService(username, password) {
-    
+  executeJWTAuthenticationService(username: string, password: string) {
+
     return this.http.post<any>(
-      `${API_URL}/authenticate`,{
-        username,
-        password
-      }).pipe(
-        map(
-          data => {
-            sessionStorage.setItem(AUTHENTICATED_USER, username);
-            sessionStorage.setItem(TOKEN, `Bearer ${data.token}`);
-            return data;
-          }
-        )
-      );
+      `${API_URL}/authenticate`, {
+      username,
+      password
+    }).pipe(
+      map(
+        data => {
+          sessionStorage.setItem(AUTHENTICATED_USER, username);
+          sessionStorage.setItem(TOKEN, `Bearer ${data.token}`);
+          return data;
+        }
+      )
+    );
     //console.log("Execute Hello World Bean Service")
   }
 
 
-  executeAuthenticationService(username, password) {
-    
+  executeAuthenticationService(username: string, password: string) {
+
     let basicAuthHeaderString = 'Basic ' + window.btoa(username + ':' + password);
 
     let headers = new HttpHeaders({
-        Authorization: basicAuthHeaderString
-      })
+      Authorization: basicAuthHeaderString
+    })
 
     return this.http.get<AuthenticationBean>(
       `${API_URL}/basicauth`,
-      {headers}).pipe(
+      { headers }).pipe(
         map(
           data => {
             sessionStorage.setItem(AUTHENTICATED_USER, username);
@@ -59,8 +59,9 @@ export class BasicAuthenticationService {
   }
 
   getAuthenticatedToken() {
-    if(this.getAuthenticatedUser())
+    if (this.getAuthenticatedUser())
       return sessionStorage.getItem(TOKEN)
+    return null
   }
 
   isUserLoggedIn() {
@@ -68,13 +69,13 @@ export class BasicAuthenticationService {
     return !(user === null)
   }
 
-  logout(){
+  logout() {
     sessionStorage.removeItem(AUTHENTICATED_USER)
     sessionStorage.removeItem(TOKEN)
   }
 
 }
 
-export class AuthenticationBean{
-  constructor(public message:string) { }
+export class AuthenticationBean {
+  constructor(public message: string) { }
 }

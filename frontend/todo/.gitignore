@@ -7,6 +7,8 @@
 
 # dependencies
 /node_modules
+.angular
+*.DS_Store
 
 # IDEs and editors
 /.idea

@@ -8,7 +8,7 @@ export class Todo {
     public description: string,
     public done: boolean,
     public targetDate: Date
-  ){
+  ) {
 
   }
 }
@@ -20,9 +20,9 @@ export class Todo {
 })
 export class ListTodosComponent implements OnInit {
 
-  todos: Todo[]
+  todos: Todo[] = [];
 
-  message: string
+  message: string = '';
 
   // = [
   //   new Todo(1, 'Learn to Dance', false, new Date()),
@@ -39,15 +39,15 @@ export class ListTodosComponent implements OnInit {
   // }
 
   constructor(
-    private todoService:TodoDataService,
-    private router : Router
+    private todoService: TodoDataService,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.refreshTodos();
   }
 
-  refreshTodos(){
+  refreshTodos() {
     this.todoService.retrieveAllTodos('in28minutes').subscribe(
       response => {
         console.log(response);
@@ -56,9 +56,9 @@ export class ListTodosComponent implements OnInit {
     )
   }
 
-  deleteTodo(id) {
-    console.log(`delete todo ${id}` )
-    this.todoService.deleteTodo('in28minutes', id).subscribe (
+  deleteTodo(id: number) {
+    console.log(`delete todo ${id}`)
+    this.todoService.deleteTodo('in28minutes', id).subscribe(
       response => {
         console.log(response);
         this.message = `Delete of Todo ${id} Successful!`;
@@ -67,12 +67,12 @@ export class ListTodosComponent implements OnInit {
     )
   }
 
-  updateTodo(id) {
+  updateTodo(id: number) {
     console.log(`update ${id}`)
-    this.router.navigate(['todos',id])
+    this.router.navigate(['todos', id])
   }
 
   addTodo() {
-    this.router.navigate(['todos',-1])
+    this.router.navigate(['todos', -1])
   }
 }
