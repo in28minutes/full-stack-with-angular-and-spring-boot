@@ -19,12 +19,31 @@ In this course, lets combine these awesome frameworks to create your first full 
 
 ## Installation Guides
 
-#### Required Tools
+### Our Recommendations
 
+- Use **latest version** of Java
+- Use **latest version** of "Eclipse IDE for Enterprise Java Developers"
+- Remember: Spring Boot 3+ works only with Java 17+
 - Node v8+ for npm
 - Visual Studio Code - Latest Version
-- Java 8+
-- Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
+
+### Installing Java
+
+- Windows - https://www.youtube.com/watch?v=I0SBRWVS0ok
+- Linux - https://www.youtube.com/watch?v=mHvFpyHK97A
+- Mac - https://www.youtube.com/watch?v=U3kTdMPlgsY
+
+#### Troubleshooting
+
+- Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
+
+### Installing Eclipse
+
+- Windows - https://www.youtube.com/watch?v=toY06tsME-M
+- Others - https://www.youtube.com/watch?v=XveQ9Gq41UM
+
+#### Troubleshooting
+- Configuring Java in Eclipse - https://www.youtube.com/watch?v=8i0r_fcE3L0
 
 #### Installing Node Js (npm) & Visual Studio Code 
 
@@ -33,16 +52,6 @@ In this course, lets combine these awesome frameworks to create your first full 
   - Step 01 - Installing NodeJs and NPM - Node Package Manager
   - Step 02 - Quick Introduction to NPM
   - Step 03 - Installing Visual Studio Code - Front End Java Script Editor
-
-#### Installing Java, Eclipse & Embedded Maven
-
-- Playlist - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-- Steps
-  - 0 - Overview - Installation Java, Eclipse and Maven
-  - 1 - Installing Java JDK
-  - 2 - Installing Eclipse IDE
-  - 3 - Using Embedded Maven in Eclipse
-  - 4 - Troubleshooting Java, Eclipse and Maven
 
 #### Troubleshooting Installations
 
@@ -1495,62 +1504,6 @@ AutomationTests -- Protractor
   
 
 ```
-
-## Todo
-- JavaScript
-  - Object Review {property1, property2}
-  - Object Clone overview
-  - Arrow Operator
-- What is npm?
-- What is WebPack?
-- Common Error Handling and Server Side Validation and Other REST API Features?
-- Common Message Component for RESTful Calls
-- Moving @CrossOrigin to a Common Location
-- What is Bundling? What are runtime.js, polyfills.js, styles.js, vendor.js, main.js? How are they generated? ```\src\main.ts```, ```\src\polyfills.ts```, ```\src\styles.css```, ```\src\**\*.component.css```
-- How can I rollback changes made by Angular CLI?
-- How can you learn to write tests for Angular? 
-- How can you learn to write end to end tests for Angular?
-- What are Dependency Injection Options other than root?
-- Spring Security Authorization
-- What are the different kinds of Data Binding?
-  - /blog/src/app/basics/basics.component.html
-  - Angular Specific Syntax
-    - [class.active]="isActive()"
-    - [style.font]="determineFont"
-- How do you build various form elements in Angular? 
-  - /blog/src/app/box/box.component.html
-  - /blog/src/app/form/form.component.html
-- What is a Child Component?
-  - person-row.component.html, person.component.html
-- How can you configure environment configuration in Angular Projects? src\environments folder
-- How do you create a production deployment? What are the production optimizations that are? What is Uglification? What is Minification?
-- https://medium.com/frontend-coach/7-must-have-visual-studio-code-extensions-for-angular-af9c476147fd
-- Dev vs Prod Configuration
-- Deployment
-  - Seperate vs Together
-  - Deploying to Cloud
-- Material Design
-- Debugging with Visual Studio Code
-  - To debug the client side Angular code, we'll need to install the Debugger for Chrome extension - https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
-  - Open the Extensions view (⇧⌘X or Ctrl+Shift+X)
-  - Type Debugger for Chrome
-  - Install
-  - Reload
-  - Go to the Debug view (⇧⌘D or Ctrl+Shift+D)
-  - Click on gear button to create launch.json
-  - Choose Chrome from the Select Environment dropdown
-  - Set URL to "url": "http://localhost:4200"
-- Running Examples
-  - Download the zip or clone the Git repository.
-  - Unzip the zip file (if you downloaded one)
-  - Open Command Prompt and Change directory (cd) to folder containing pom.xml
-  - Open Eclipse 
-     - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-     - Select the right project
-  - Choose the Spring Boot Application file (search for file with @SpringBootApplication)
-  - Right Click on the file and Run as Java Application
-  - You are all Set
-  - For help : use our installation guide - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 
 ## Next Steps
 - Angular
