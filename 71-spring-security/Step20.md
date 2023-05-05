@@ -157,8 +157,8 @@ public class JwtAuthenticationResource {
 	}
 	
 	@PostMapping("/authenticate") 
-	public JwtRespose authenticate(Authentication authentication) {
-		return new JwtRespose(createToken(authentication));
+	public JwtResponse authenticate(Authentication authentication) {
+		return new JwtResponse(createToken(authentication));
 	}
 
 	private String createToken(Authentication authentication) {
@@ -182,7 +182,7 @@ public class JwtAuthenticationResource {
 
 }
 
-record JwtRespose(String token) {}
+record JwtResponse(String token) {}
 ```
 ---
 
