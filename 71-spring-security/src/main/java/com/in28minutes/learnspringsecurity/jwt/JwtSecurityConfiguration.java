@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -30,6 +29,8 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 
 //@Configuration
 public class JwtSecurityConfiguration {
@@ -47,14 +48,15 @@ public class JwtSecurityConfiguration {
 							session.sessionCreationPolicy(
 									SessionCreationPolicy.STATELESS)
 						);
-		
-		http.httpBasic();
-		
-		http.csrf().disable();
-		
-		http.headers().frameOptions().sameOrigin();
-		
-		http.oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
+
+		http.httpBasic(withDefaults());
+
+		http.csrf(csrf -> csrf.disable());
+
+		http.headers(headersConfigurer -> headersConfigurer.frameOptions(frameOptionsConfig -> frameOptionsConfig.sameOrigin()));
+
+
+		http.oauth2ResourceServer((oauth2) -> oauth2.jwt(withDefaults()));
 		
 		
 		return http.build();

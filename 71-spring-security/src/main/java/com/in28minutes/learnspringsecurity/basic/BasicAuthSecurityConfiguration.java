@@ -16,6 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 
 @Configuration
 @EnableMethodSecurity(jsr250Enabled = true, securedEnabled = true)
@@ -37,11 +39,11 @@ public class BasicAuthSecurityConfiguration {
 						);
 		
 		//http.formLogin();
-		http.httpBasic();
-		
-		http.csrf().disable();
-		
-		http.headers().frameOptions().sameOrigin();
+		http.httpBasic(withDefaults());
+
+		http.csrf(csrf -> csrf.disable());
+
+		http.headers(headers -> headers.frameOptions(frameOptionsConfig-> frameOptionsConfig.disable()));
 		
 		return http.build();
 	}

@@ -14,7 +14,7 @@ public class OauthSecurityConfiguration {
 	@Bean
 	@Order(SecurityProperties.BASIC_AUTH_ORDER)
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests().anyRequest().authenticated();
+		http.authorizeHttpRequests(httpRequest -> httpRequest.anyRequest().authenticated());
 		//http.formLogin();
 		//http.httpBasic();
 		http.oauth2Login(Customizer.withDefaults());
