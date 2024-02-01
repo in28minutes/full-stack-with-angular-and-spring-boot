@@ -1,5 +1,29 @@
 # Migration Steps for an existing Angular project to standalone
 
+### Prerequisites
+When you execute `ng version`
+
+Angular CLI: 17.1.1
+
+Node: 18.19.0
+
+Package Manager: npm 10.4.0
+
+OS: darwin x64
+
+Angular: undefined
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.1701.1 (cli-only)
+
+@angular-devkit/core         17.1.1 (cli-only)
+
+@angular-devkit/schematics   17.1.1 (cli-only)
+
+@schematics/angular          17.1.1 (cli-only)
+
 ### Step 1: Update all the dependencies and dev dependencies in `package.json`
 1. Angular dependencies to 17.1.1
 2. rxjs to 7.8.1
