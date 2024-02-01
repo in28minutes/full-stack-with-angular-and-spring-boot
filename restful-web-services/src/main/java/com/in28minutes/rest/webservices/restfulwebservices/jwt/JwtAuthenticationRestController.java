@@ -24,13 +24,9 @@ public class JwtAuthenticationRestController {
     public ResponseEntity<JwtTokenResponse> generateToken(
             @RequestBody JwtTokenRequest jwtTokenRequest) {
 
-        var authenticationToken =
-                new UsernamePasswordAuthenticationToken(
-                        jwtTokenRequest.username(),
-                        jwtTokenRequest.password());
+        var authenticationToken = new UsernamePasswordAuthenticationToken(jwtTokenRequest.username(), jwtTokenRequest.password());
 
-        var authentication =
-                authenticationManager.authenticate(authenticationToken);
+        var authentication = authenticationManager.authenticate(authenticationToken);
 
         var token = tokenService.generateToken(authentication);
 

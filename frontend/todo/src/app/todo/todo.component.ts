@@ -2,11 +2,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TodoDataService } from './../service/data/todo-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../list-todos/list-todos.component';
+import { FormsModule } from '@angular/forms';
+import { NgIf, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+    selector: 'app-todo',
+    templateUrl: './todo.component.html',
+    styleUrls: ['./todo.component.css'],
+    standalone: true,
+    imports: [NgIf, FormsModule, DatePipe]
 })
 export class TodoComponent implements OnInit {
 
