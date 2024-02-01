@@ -58,9 +58,8 @@ public class JWTWebSecurityConfig {
 				.csrf(AbstractHttpConfigurer::disable)
 				.sessionManagement(session -> session.
 						sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-				.oauth2ResourceServer((oauth2) -> oauth2.jwt(withDefaults()))
-				.httpBasic(
-						withDefaults())
+				.oauth2ResourceServer(oauth2 -> oauth2.jwt(withDefaults()))
+				.httpBasic(withDefaults())
 				.headers(header -> header.frameOptions(frameOptionsConfig -> frameOptionsConfig.sameOrigin()))
 				.build();
 	}
@@ -88,8 +87,7 @@ public class JWTWebSecurityConfig {
 	public JWKSource<SecurityContext> jwkSource() {
 		JWKSet jwkSet = new JWKSet(rsaKey());
 
-		return (((jwkSelector, securityContext)
-				-> jwkSelector.select(jwkSet)));
+		return ((jwkSelector, securityContext) -> jwkSelector.select(jwkSet));
 	}
 
 	@Bean
@@ -122,8 +120,7 @@ public class JWTWebSecurityConfig {
 			keyPairGenerator.initialize(2048);
 			return keyPairGenerator.generateKeyPair();
 		} catch (Exception e) {
-			throw new IllegalStateException(
-					"Unable to generate an RSA Key Pair", e);
+			throw new IllegalStateException("Unable to generate an RSA Key Pair", e);
 		}
 	}
 

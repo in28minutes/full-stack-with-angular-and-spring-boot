@@ -1,6 +1,7 @@
 import { TodoDataService } from './../service/data/todo-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgIf, NgFor, UpperCasePipe, DatePipe } from '@angular/common';
 
 export class Todo {
   constructor(
@@ -14,9 +15,11 @@ export class Todo {
 }
 
 @Component({
-  selector: 'app-list-todos',
-  templateUrl: './list-todos.component.html',
-  styleUrls: ['./list-todos.component.css']
+    selector: 'app-list-todos',
+    templateUrl: './list-todos.component.html',
+    styleUrls: ['./list-todos.component.css'],
+    standalone: true,
+    imports: [NgIf, NgFor, UpperCasePipe, DatePipe]
 })
 export class ListTodosComponent implements OnInit {
 

@@ -1,17 +1,20 @@
 import { WelcomeDataService } from './../service/data/welcome-data.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 //package com.in28minutes.springboot.web;
 
 //import org.springframework.boot.SpringApplication;
 import { Component, OnInit } from '@angular/core';//'./app.component';
+import { NgIf } from '@angular/common';
 //import { AppComponent } from '../app.component';
 
 //@ComponentScan(
 //      value = "com.in28minutes.springboot.web")
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+    selector: 'app-welcome',
+    templateUrl: './welcome.component.html',
+    styleUrls: ['./welcome.component.css'],
+    standalone: true,
+    imports: [RouterLink, NgIf]
 })
 
 //public class SpringBootFirstWebApplication implements SomeInterface{
