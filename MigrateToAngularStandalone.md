@@ -71,3 +71,7 @@ UPDATE src/main.ts (1029 bytes)
 UPDATE src/app/app.component.ts (535 bytes)
 UPDATE src/app/app.component.spec.ts (1051 bytes)
 
+For more details, please go through the following links
+1. https://angular.io/guide/standalone-migration
+2. https://angular.io/guide/standalone-components
+
