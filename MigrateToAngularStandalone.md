@@ -1,6 +1,6 @@
 # Migration Steps for an existing Angular project to standalone
 
-### Step 1: Update all the dependencies and dev dependencies
+### Step 1: Update all the dependencies and dev dependencies in `package.json`
 1. Angular dependencies to 17.1.1
 2. rxjs to 7.8.1
 3. tslib to 2.6.2
