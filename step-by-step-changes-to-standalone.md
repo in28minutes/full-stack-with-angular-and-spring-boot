@@ -162,13 +162,14 @@ export class LoginComponent implements OnInit {
 ### AFTER
 ```js
 import { Component } from '@angular/core';
-import { NgIf } from '@angular/common'; // Changed
+import { NgIf } from '@angular/common'; // Added
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  imports: [NgIf]
+  standalone: true // Generated - Change
+  imports: [NgIf] // Added
 })
 export class LoginComponent implements OnInit {
   username = 'in28minutes'
@@ -258,14 +259,14 @@ export class ListTodosComponent implements OnInit {
 ```js
 import { Component, OnInit } from '@angular/core';
 
-import { NgIf, NgFor, UpperCasePipe, DatePipe } from '@angular/common';
+import { NgIf, NgFor, UpperCasePipe, DatePipe } from '@angular/common'; // Added
 
 @Component({
     selector: 'app-list-todos',
     templateUrl: './list-todos.component.html',
     styleUrls: ['./list-todos.component.css'],
     standalone: true, // Generated - Change
-    imports: [NgIf, NgFor, UpperCasePipe, DatePipe] // Generated - Change
+    imports: [NgIf, NgFor, UpperCasePipe, DatePipe] // Added
     
 })
 export class ListTodosComponent implements OnInit {
@@ -301,7 +302,7 @@ export class WelcomeComponent implements OnInit {
 ```js
 import { ActivatedRoute, RouterLink } from '@angular/router'; // Added RouterLink
 import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { NgIf } from '@angular/common'; // Added
 
 @Component({
   selector: 'app-welcome',
