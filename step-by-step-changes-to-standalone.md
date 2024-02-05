@@ -12,6 +12,7 @@ Consequently, you can effortlessly import and utilize them in any section of an 
 - Increased modularity
 - Improved performance
 
+Let's start...
 # Section3: Getting Hands on With Angular
 ## 14. Step 09: Change - generated
 ### frontend/todo/src/app/app.component.ts
