@@ -31,23 +31,15 @@ import com.nimbusds.jose.proc.SecurityContext;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
-
 //@Configuration
 public class JwtSecurityConfiguration {
 	
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
-		http.authorizeHttpRequests(
-						auth -> {
-							auth.anyRequest().authenticated();
-						});
+		http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
 		
-		http.sessionManagement(
-						session -> 
-							session.sessionCreationPolicy(
-									SessionCreationPolicy.STATELESS)
-						);
+		http.sessionManagement(session ->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
 		http.httpBasic(withDefaults());
 
@@ -55,9 +47,7 @@ public class JwtSecurityConfiguration {
 
 		http.headers(headersConfigurer -> headersConfigurer.frameOptions(frameOptionsConfig -> frameOptionsConfig.sameOrigin()));
 
-
-		http.oauth2ResourceServer((oauth2) -> oauth2.jwt(withDefaults()));
-		
+		http.oauth2ResourceServer(oauth2 -> oauth2.jwt(withDefaults()));
 		
 		return http.build();
 	}
