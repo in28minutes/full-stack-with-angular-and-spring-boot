@@ -12,7 +12,10 @@ Consequently, you can effortlessly import and utilize them in any section of an 
 - Increased modularity
 - Improved performance
 
-Let's start...
+> [!IMPORTANT]
+> If you have you're using Angular <= 17.1.1, please follow the migration steps provided [here](MigrateToAngularStandalone.md)
+### Let's start...
+
 # Section3: Getting Hands on With Angular
 ## 14. Step 09: Change - generated
 ### frontend/todo/src/app/app.component.ts
@@ -235,7 +238,7 @@ export class ErrorComponent implements OnInit {
 
 }
 ```
-## 25. Step 20: Change - generated, No Update in app.module.ts
+## 25. Step 20: Change - generated, No Update in app.module.ts(deleted in standalone)
 ### frontend/todo/src/list-todos/list-todos.component.ts
 
 ### BEFORE
@@ -257,6 +260,7 @@ export class ListTodosComponent implements OnInit {
 }
 ```
 ### AFTER
+> NOTE: In a standalone setup, the utilization of `@NgModule` and the `app.module.ts` file is not required, resulting in no updates being made.
 ```js
 import { Component, OnInit } from '@angular/core';
 
@@ -319,3 +323,156 @@ export class WelcomeComponent implements OnInit {
    }
 }
 ```
+## 32. Step 27: Change - generated, No Update in app.module.ts(deleted in standalone)
+### frontend/todo/src/app/menu/menu.component.ts
+
+### BEFORE
+```js
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrls: ['./menu.component.css'],
+})
+export class MenuComponent implements OnInit {
+   constructor() { }
+   
+   ngOnInit() {
+   }
+}
+```
+
+### AFTER
+> NOTE: In a standalone setup, the utilization of `@NgModule` and the `app.module.ts` file is not required, resulting in no updates being made.
+```js
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrls: ['./menu.component.css'],
+    standalone: true // Generated - Change
+})
+export class MenuComponent implements OnInit {
+   constructor() { }
+   
+   ngOnInit() {
+   }
+}
+```
+### frontend/todo/src/app/footer/footer.component.ts
+
+### BEFORE
+```js
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrls: ['./menu.component.css'],
+})
+export class MenuComponent implements OnInit {
+   constructor() { }
+   
+   ngOnInit() {
+   }
+}
+```
+
+### AFTER
+> NOTE: In a standalone setup, the utilization of `@NgModule` and the `app.module.ts` file is not required, resulting in no updates being made.
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.css'],
+    standalone: true // Generated - Change
+})
+export class FooterComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+## 34. Step 29: Replace `@` with html ASCII code 
+### frontend/todo/src/app/footer/footer.component.html
+
+### BEFORE
+```html
+<span class="text-muted">All Rights Reserved 2018 @in28minutes</span>
+```
+### AFTER
+```html
+<span class="text-muted">All Rights Reserved 2024 &#64;in28minutes</span>
+```
+
+## 35. Step 30: Import routerLink to `menu.component.ts`
+### frontend/todo/src/app/menu/menu.component.ts
+
+```js
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router'; // Added
+
+@Component({
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.css'],
+    standalone: true, // Generated - Change
+    imports: [RouterLink] // Added
+})
+export class FooterComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+## 41. Step 34: Change - generated, No Update in app.module.ts(deleted in standalone)
+### frontend/todo/src/logout/logout.component.ts
+
+### BEFORE
+```js
+import { Component, OnInit} from '@angular/core';
+
+@Component({
+    selector: 'app-logout',
+    templateUrl: './logout.component.html',
+    styleUrls: ['./logout.component.css'],
+})
+export class LogoutComponent implements OnInit {
+   constructor() { }
+
+   ngOnInit() {
+   }
+}
+```
+
+### AFTER
+> NOTE: In a standalone setup, the utilization of `@NgModule` and the `app.module.ts` file is not required, resulting in no updates being made.
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+   selector: 'app-logout',
+   templateUrl: './logout.component.html',
+   styleUrls: ['./logout.component.css'],
+   standalone: true // Generated - Change
+})
+export class LogoutComponent implements OnInit {
+  
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
+```
+
