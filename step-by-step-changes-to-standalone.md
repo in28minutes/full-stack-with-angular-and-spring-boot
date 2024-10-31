@@ -475,4 +475,76 @@ export class LogoutComponent implements OnInit {
   }
 }
 ```
+### Step 64: HttpClientModule provideHttpClient Changes 
+### Refactor `main.ts` and add `app.config.ts` file
+### /frontend/todo/src/main.ts
+Beginning with Angular 17 and subsequent versions, it is necessary to include application configuration elements such as provideHttpClient and routing, which have been incorporated into `app.config.ts`.
+Hence, we have refactored `main.ts`
 
+### BEFORE
+```js 
+import { enableProdMode, importProvidersFrom } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+
+import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app/app-routing.module';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { HttpIntercepterBasicAuthService } from './app/service/http/http-intercepter-basic-auth.service';
+import { HTTP_INTERCEPTORS, withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+bootstrapApplication(AppComponent, {
+    providers: [
+        importProvidersFrom(BrowserModule, AppRoutingModule, FormsModule),
+        { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true },
+        provideHttpClient(withInterceptorsFromDi())
+    ]
+})
+  .catch(err => console.error(err));
+````
+### AFTER
+For Angular 17 or greater
+> If you're creating project in Angular 17 or greater `app.config.ts` will automatically under `/todo/src/app/app.config.ts`
+
+Add/replace with the following code snippet for running todo application in `app.config.ts`
+
+```js
+import { ApplicationConfig } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { importProvidersFrom } from '@angular/core';
+
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { HTTP_INTERCEPTORS, withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
+import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
+
+
+export const appConfig: ApplicationConfig = {
+    providers: [importProvidersFrom(BrowserModule, AppRoutingModule, FormsModule),
+    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true },
+    provideHttpClient(withInterceptorsFromDi())]
+};
+```
+### Refactor `main.ts` and importing `appConfig`
+
+```js
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
+
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';//ADDED 
+
+if (environment.production) {
+  enableProdMode();
+}
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));
+```
