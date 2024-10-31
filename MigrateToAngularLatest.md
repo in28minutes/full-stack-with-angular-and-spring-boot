@@ -90,4 +90,7 @@ Angular CLI provided an optional migration to be executed:
 
 Result: No changes were necessary for these migrations.
 
+## Reference
+https://angular.dev/cli/update
+
 Happy Developing!
