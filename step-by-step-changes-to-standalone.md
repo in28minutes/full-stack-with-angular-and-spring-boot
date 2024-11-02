@@ -481,6 +481,8 @@ export class LogoutComponent implements OnInit {
 Beginning with Angular 17 and subsequent versions, it is necessary to include application configuration elements such as provideHttpClient and routing, which have been incorporated into `app.config.ts`.
 Hence, we have refactored `main.ts`
 
+### FOR ANGULAR 15 to 17/18
+
 ### BEFORE
 ```js 
 import { enableProdMode, importProvidersFrom } from '@angular/core';
@@ -508,6 +510,10 @@ bootstrapApplication(AppComponent, {
 })
   .catch(err => console.error(err));
 ````
+
+### FOR ANGULAR 17/18 OR LATER
+> **NOTE: IF YOU'RE USING ANGULAR 17/18 OR LATER, YOU CAN USE DIRECTLY USE THE CHANGES MENTIONED IN THE AFTER SECTION IN THE `app.config.ts` AND `main.ts`**
+
 ### AFTER
 For Angular 17 or greater
 > If you're creating project in Angular 17 or greater `app.config.ts` will automatically under `/todo/src/app/app.config.ts`
@@ -524,14 +530,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
 import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
 
-
 export const appConfig: ApplicationConfig = {
     providers: [importProvidersFrom(BrowserModule, AppRoutingModule, FormsModule),
     { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true },
     provideHttpClient(withInterceptorsFromDi())]
 };
 ```
-### Refactor `main.ts` and importing `appConfig`
+### Refactor `main.ts` and import `appConfig`
 
 ```js
 import { enableProdMode } from '@angular/core';
