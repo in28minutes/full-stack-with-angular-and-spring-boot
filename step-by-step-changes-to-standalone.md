@@ -475,15 +475,56 @@ export class LogoutComponent implements OnInit {
   }
 }
 ```
-### Step 64: HttpClientModule provideHttpClient Changes 
-### Refactor `main.ts` and add `app.config.ts` file
-### /frontend/todo/src/main.ts
+### Section 3: Getting Hands on With Angular
+#### 32.Step 23: Quick Introduction to Angular Modules
+#### 33.Step 24: Understanding Bootstrapping of Angular App with Root Module and Components
+
+For Angular 17 or greater
+> If you're creating project in Angular 17 or greater `app.config.ts` will automatically under `/todo/src/app/app.config.ts`
+
+### Refactor `main.ts` and import `appConfig`
+
+```js
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
+
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';//ADDED 
+
+if (environment.production) {
+  enableProdMode();
+}
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));
+```
+
+Add/replace with the following code snippet for running todo application in `app.config.ts`
+
+```js
+import { ApplicationConfig } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { importProvidersFrom } from '@angular/core';
+
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
+export const appConfig: ApplicationConfig = {
+    providers: [importProvidersFrom(BrowserModule, AppRoutingModule, FormsModule)]
+};
+```
+
+### Section 6: Connecting to Angular Frontend to Spring Boot Restful Services
+#### Step 64: HttpClientModule provideHttpClient Changes 
+- Refactor `main.ts` and add `app.config.ts` file
+#### /frontend/todo/src/main.ts
 Beginning with Angular 17 and subsequent versions, it is necessary to include application configuration elements such as provideHttpClient and routing, which have been incorporated into `app.config.ts`.
 Hence, we have refactored `main.ts`
 
-### FOR ANGULAR 15 to 17/18
+#### FOR ANGULAR 15 to 17/18
+> **NOTE: IF YOU'RE USING ANGULAR 17/18 OR LATER, YOU CAN USE DIRECTLY USE THE CHANGES MENTIONED IN THE AFTER SECTION IN THE `app.config.ts` AND `main.ts`**
 
-### BEFORE
 ```js 
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -511,12 +552,6 @@ bootstrapApplication(AppComponent, {
   .catch(err => console.error(err));
 ````
 
-### FOR ANGULAR 17/18 OR LATER
-> **NOTE: IF YOU'RE USING ANGULAR 17/18 OR LATER, YOU CAN USE DIRECTLY USE THE CHANGES MENTIONED IN THE AFTER SECTION IN THE `app.config.ts` AND `main.ts`**
-
-### AFTER
-For Angular 17 or greater
-> If you're creating project in Angular 17 or greater `app.config.ts` will automatically under `/todo/src/app/app.config.ts`
 
 Add/replace with the following code snippet for running todo application in `app.config.ts`
 
@@ -527,29 +562,12 @@ import { importProvidersFrom } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS, withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
-import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
+import { HTTP_INTERCEPTORS, withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';// Add in this step
+import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';// Add in this step
 
 export const appConfig: ApplicationConfig = {
     providers: [importProvidersFrom(BrowserModule, AppRoutingModule, FormsModule),
-    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true },
-    provideHttpClient(withInterceptorsFromDi())]
+    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true },// Add in this step
+    provideHttpClient(withInterceptorsFromDi())] // Add in this step
 };
-```
-### Refactor `main.ts` and import `appConfig`
-
-```js
-import { enableProdMode } from '@angular/core';
-import { environment } from './environments/environment';
-import { AppComponent } from './app/app.component';
-
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';//ADDED 
-
-if (environment.production) {
-  enableProdMode();
-}
-
-bootstrapApplication(AppComponent, appConfig)
-  .catch(err => console.error(err));
 ```
