@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
           data => {
             console.log(data)
             this.router.navigate(['welcome', this.username])
-            this.invalidLogin = false      
+            this.invalidLogin = false
           },
           error => {
             console.log(error)
